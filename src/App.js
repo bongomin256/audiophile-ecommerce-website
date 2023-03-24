@@ -1,8 +1,10 @@
+import Home from "./pages/Home";
+
 function App() {
   return (
-    <div className="">
-      <h1>Audiophile</h1>
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
 
