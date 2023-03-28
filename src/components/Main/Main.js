@@ -1,12 +1,17 @@
 import React from "react";
-import Overlay from "../Overlay/Overlay";
+import Footor from "../Footer/Footor";
+import Nav from "../Nav/Nav";
+// import Overlay from "../Overlay/Overlay";
 
-function Main() {
+const MainLayout = ({ children }) => {
   return (
     <main>
-      <Overlay />
+      <Nav />
+      {children}
+      <Footor />
+      {/* <Overlay /> */}
     </main>
   );
-}
+};
 
-export default Main;
+export default MainLayout;

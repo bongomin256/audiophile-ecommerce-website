@@ -12,19 +12,24 @@ module.exports = {
         black: "#000000",
         "black-10": "#101010",
       },
-      backgroundImages: {
-        mobile: "./assets/home/mobile/image-header.jpg",
-        tablet: "./assets/home/tablet/image-header.jpg",
-        desktop: "./assets/home/desktop/image-hero.jpg",
+      backgroundImage: {
+        mobileHeader: "url('/public/assets/home/mobile/image-header.jpg')",
+        tabletHeader: "url('/public/assets/home/tablet/image-header.jpg')",
+        desktopHeader: "url('/public/assets/home/desktop/image-hero.jpg')",
       },
       fontFamily: {
         manrope: ["Manrope", "sans - serif"],
       },
-    },
-    screens: {
-      xs: "375px",
-      sm: "768px",
-      md: "1060px",
+      // etterSpacing: {
+      //   tightest: "-.075em",
+      //   tighter: "-.05em",
+      //   tight: "-.025em",
+      //   normal: "0",
+      //   wide: ".025em",
+      //   wider: ".05em",
+      //   widest: ".1em",
+      //   widestXl: ".25em",
+      // },
     },
   },
   plugins: [],
