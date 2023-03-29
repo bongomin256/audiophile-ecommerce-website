@@ -3,6 +3,8 @@ import cart from "../../assets/shared/desktop/icon-cart.svg";
 import logo from "../../assets/shared/desktop/logo.svg";
 import mobileMenu from "../../assets/shared/tablet/icon-hamburger.svg";
 
+import Category from "../Category/Category";
+
 import { AiOutlineShoppingCart, AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -15,20 +17,20 @@ function Nav() {
         className={`${flexBetween} bg-black-10 border-b border-gray-600 text-white py-10 px-8 absolute z-30 w-full lg:px-28`}
       >
         <div
-          className={`${
-            isMobileNavOpen ? <GiHamburgerMenu /> : <AiOutlineClose />
-          } lg:hidden`}
+          // className={`${
+          //   isMobileNavOpen ? <GiHamburgerMenu /> : <AiOutlineClose />
+          // } lg:hidden`}
           onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
           // className="lg:hidden"
         >
           <img
             src={mobileMenu}
             alt="mobile menu"
+
             // className="text-3xl "
             // onClick={() => setIsMobileNavOpen(true)}
           />
         </div>
-
         <div>
           <img src={logo} alt="logo" />
           {/* <h1 className="text-3xl font-bold font-manrope ">audiophile</h1> */}
