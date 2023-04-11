@@ -26,7 +26,7 @@ const Zx9Speaker = () => {
             </p>
           </div>
           <div className="text-center lg:text-left">
-            <button className="px-6 py-4 tracking-widest text-white uppercase bg-black-10">
+            <button className="px-6 py-4 tracking-widest text-white uppercase bg-black-10 hover:bg-grayHover">
               see product
             </button>
           </div>

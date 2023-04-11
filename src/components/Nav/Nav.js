@@ -44,10 +44,10 @@ function Nav() {
           onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
         >
           <ul className={`${flexBetween} gap-6 uppercase lg:gap-10`}>
-            <li>Home</li>
-            <li>Headphones</li>
-            <li>Speakers</li>
-            <li>Ear Phones</li>
+            <li className="hover:text-orange-300">Home</li>
+            <li className="hover:text-orange-300">Headphones</li>
+            <li className="hover:text-orange-300">Speakers</li>
+            <li className="hover:text-orange-300">Ear Phones</li>
           </ul>
         </nav>
         <img src={cart} alt="cart" />

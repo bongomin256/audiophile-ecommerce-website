@@ -8,6 +8,7 @@ module.exports = {
         "orange-300": "#D87D4A",
         "gray-20": "#FAFAFA",
         "gray-30": "#F1F1F1",
+        grayHover: "#4C4C4C",
         "white-30": "#FFFFFF",
         black: "#000000",
         "black-10": "#101010",
