@@ -7,7 +7,7 @@ const Category = () => {
   return (
     <section className="px-8 mt-[2.2rem] md:mt-[8.5rem] lg:px-28">
       {/* className="px-8 mt-[2.2rem] grid grid-cols-1 gap-28 md:grid-cols-[3] */}
-      <div className="flex flex-col gap-28 md:flex-row md:gap-14 md:w-full md:justify-center lg:gap-36">
+      <div className="flex flex-col gap-28 md:flex-row md:gap-14 md:w-full md:justify-center lg:gap-40">
         <div>
           <div className="flex flex-col items-center justify-center ">
             <div className="relative z-10 w-40 bottom-20">

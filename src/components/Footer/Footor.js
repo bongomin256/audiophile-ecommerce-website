@@ -6,8 +6,8 @@ import logo from "../../assets/shared/desktop/logo.svg";
 
 function Footor() {
   return (
-    <footer className="flex flex-col items-center justify-center gap-10 px-10 py-10 bg-black mt-14 md:items-start">
-      <section className="flex flex-col gap-10 ">
+    <footer className="flex flex-col items-center justify-center gap-10 px-10 py-10 bg-black mt-14 md:items-start md:px-16 lg:px-28">
+      <section className="flex flex-col gap-10 lg:flex-row lg:justify-between lg:w-full">
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
@@ -19,15 +19,15 @@ function Footor() {
         </ul>
       </section>
       <section>
-        <div className="mb-[2.5rem] text-center md:text-start">
-          <p>
+        <div className="mb-[2.5rem] text-center md:text-start lg:w-1/2">
+          <p className="lg:w-full lg:text-start">
             Audiophile is an all in one stop to fulfill your audio needs. We're
             a small team of music lovers and sound specialists who are devoted
             to helping you get the most out of personal audio. Come and visit
             our demo facility - we’re open 7 days a week.
           </p>
         </div>
-        <div className="md:flex md:justify-between">
+        <div className="md:flex md:justify-between lg:justify-between">
           <p className="mb-[2.5rem] text-center">
             Copyright 2021. All Rights Reserved
           </p>

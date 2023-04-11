@@ -21,7 +21,7 @@ function Nav() {
           //   isMobileNavOpen ? <GiHamburgerMenu /> : <AiOutlineClose />
           // } lg:hidden`}
           onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
-          // className="lg:hidden"
+          className="lg:hidden"
         >
           <img
             src={mobileMenu}
@@ -37,10 +37,13 @@ function Nav() {
         </div>
 
         <nav
-          className={`${isMobileNavOpen ? "hidden" : "block"} lg:block`}
+          className={`${
+            isMobileNavOpen ? "hidden" : "block"
+          } md:hidden lg:block `}
+          // className={`${isMobileNavOpen ? "hidden" : "block"} lg:block`}
           onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
         >
-          <ul className={`${flexBetween} gap-6`}>
+          <ul className={`${flexBetween} gap-6 uppercase lg:gap-10`}>
             <li>Home</li>
             <li>Headphones</li>
             <li>Speakers</li>

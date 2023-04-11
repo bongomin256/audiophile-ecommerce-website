@@ -4,9 +4,9 @@ function Hero() {
     <>
       <section className="relative h-screen px-8 bg-no-repeat bg-contain bg-mobileHeader md:px-10 md:bg-tabletHeader lg:bg-desktopHeader lg:px-28 ">
         <div
-          className={`${flexBetween} flex-col gap-5 h-full text-center lg:w-1/3 lg:text-start`}
+          className={`${flexBetween} flex-col gap-5 h-full text-center lg:w-1/3 lg:text-left lg:items-start`}
         >
-          <h3 className="tracking-widest text-gray-500 uppercase">
+          <h3 className="text-gray-500 uppercase tracking-widestXS ">
             New product
           </h3>
           <div>
@@ -14,8 +14,8 @@ function Hero() {
               XX99 Mark II Headphones
             </h2>
           </div>
-          <div className="md:w-3/5">
-            <p className="text-base tracking-wider text-gray-400">
+          <div className="md:w-3/5 lg:w-full">
+            <p className="text-base tracking-wider text-gray-400 lg:w-full">
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
