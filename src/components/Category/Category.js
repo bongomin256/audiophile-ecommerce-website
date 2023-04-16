@@ -13,7 +13,7 @@ const Category = () => {
             <div className="relative z-10 w-40 bottom-20">
               <img src={headphone} alt="headphone" />
             </div>
-            <div className="absolute flex flex-col items-center justify-center w-4/5 h-40 rounded-md py-9 bg-gray-30 md:w-1/4 lg:w-1/5">
+            <div className="absolute flex flex-col items-center justify-center w-4/5 h-40 rounded-lg py-9 bg-gray-30 md:w-1/4 lg:w-1/5">
               <h3 className="text-base font-medium uppercase ">headphones</h3>
               <p className="flex items-center justify-center gap-2 text-sm uppercase">
                 shop
@@ -26,7 +26,7 @@ const Category = () => {
           <div className="relative z-10 w-40 bottom-20 ">
             <img src={speaker} alt="speaker" />
           </div>
-          <div className="absolute flex flex-col items-center justify-center w-4/5 h-40 rounded-md py-9 bg-gray-30 md:w-1/4 lg:w-1/5">
+          <div className="absolute flex flex-col items-center justify-center w-4/5 h-40 rounded-lg py-9 bg-gray-30 md:w-1/4 lg:w-1/5">
             <h3 className="text-base font-medium uppercase ">headphones</h3>
             <p className="flex items-center justify-center gap-2 text-sm uppercase">
               shop
@@ -38,7 +38,7 @@ const Category = () => {
           <div className="relative z-10 w-40 bottom-20 ">
             <img src={earphone} alt="earphone" />
           </div>
-          <div className="absolute flex flex-col items-center justify-center w-4/5 h-40 rounded-md py-9 bg-gray-30 md:w-1/4 lg:w-1/5">
+          <div className="absolute flex flex-col items-center justify-center w-4/5 h-40 rounded-lg py-9 bg-gray-30 md:w-1/4 lg:w-1/5">
             <h3 className="text-base font-medium uppercase ">headphones</h3>
             <p className="flex items-center justify-center gap-2 text-sm uppercase">
               shop

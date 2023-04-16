@@ -6,16 +6,16 @@ import logo from "../../assets/shared/desktop/logo.svg";
 
 function Footor() {
   return (
-    <footer className="flex flex-col items-center justify-center gap-10 px-10 py-10 bg-black mt-14 md:items-start md:px-16 lg:px-28">
+    <footer className="flex flex-col items-center justify-center gap-10 px-10 py-10 bg-black mt-28 md:items-start md:px-16 lg:px-28">
       <section className="flex flex-col gap-10 lg:flex-row lg:justify-between lg:w-full">
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
-        <ul className="flex flex-col justify-center gap-4 font-semibold tracking-widest text-center uppercase text-gray-30 md:flex-row">
-          <li>home</li>
-          <li>headphones</li>
-          <li>speakers</li>
-          <li>earphones</li>
+        <ul className="flex flex-col justify-center gap-4 font-semibold tracking-widest text-center uppercase cursor-pointer text-gray-30 md:flex-row">
+          <li className="hover:text-orange-300 ">home</li>
+          <li className="hover:text-orange-300">headphones</li>
+          <li className="hover:text-orange-300">speakers</li>
+          <li className="hover:text-orange-300">earphones</li>
         </ul>
       </section>
       <section>
@@ -31,7 +31,7 @@ function Footor() {
           <p className="mb-[2.5rem] text-center">
             Copyright 2021. All Rights Reserved
           </p>
-          <div className="flex justify-center gap-4 text-center social-icons">
+          <div className="flex justify-center gap-4 text-center cursor-pointer social-icons">
             <i>
               <img src={fbIcon} alt="facebook icon" />
             </i>
