@@ -5,19 +5,24 @@ import bestGearDesktop from "../../assets/shared/desktop/image-best-gear.jpg";
 const bestGear = () => {
   return (
     <section className="px-8 mt-24 md:px-16 lg:px-28">
-      <article className="flex flex-col gap-10 lg:flex-row lg:items-center">
-        <picture className="lg:flex-1">
+      <article className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
+        {/* className="flex flex-col gap-10 lg:items-center lg:flex-row" */}
+        <picture className="lg:order-2">
           <source media="(min-width: 1024px)" srcset={bestGearDesktop} alt="" />
           <source media="(min-width: 768px )" srcset={bestGearTablet} alt="" />
-          <img className="rounded-lg" src={bestGearMobile} alt="" />
+          <img
+            className="rounded-lg lg:w-full md:mb-12"
+            // lg:flex-1
+            src={bestGearMobile}
+            alt=""
+          />
         </picture>
-
-        <section className="text-center md:px-24 lg:flex-1 lg:text-start">
+        <section className="text-center md:px-24 lg:px-0 lg:text-start lg:w-3/4">
+          {/* lg:flex-1 lg:text-start lg:px-0 */}
           <h3 className="mb-10 text-3xl font-semibold text-black uppercase md:text-4xl">
             bring you the <span className="text-orange-300">best</span> audio
             gear
           </h3>
-
           <article>
             <p className="leading-relaxed">
               Located at the heart of New York City, Audiophile is the premier

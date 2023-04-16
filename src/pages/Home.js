@@ -10,6 +10,7 @@ function Home() {
     <MainLayout>
       <Hero />
       <Category />
+
       <Zx9Speaker />
       <Yx1Earphones />
       <BestGear />
