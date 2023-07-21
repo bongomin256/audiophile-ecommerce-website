@@ -3,13 +3,16 @@ import fbIcon from "../../assets/shared/desktop/icon-facebook.svg";
 import instagramIcon from "../../assets/shared/desktop/icon-instagram.svg";
 import twitterIcon from "../../assets/shared/desktop/icon-twitter.svg";
 import logo from "../../assets/shared/desktop/logo.svg";
+import { Link } from "react-router-dom";
 
 function Footor() {
   return (
     <footer className="flex flex-col items-center justify-center gap-10 px-10 py-10 bg-black mt-28 md:items-start md:px-16 lg:px-28">
       <section className="flex flex-col gap-10 lg:flex-row lg:justify-between lg:w-full">
         <div className="logo">
-          <img src={logo} alt="logo" />
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
         </div>
         <ul className="flex flex-col justify-center gap-4 font-semibold tracking-widest text-center uppercase cursor-pointer text-gray-30 md:flex-row">
           <li className="hover:text-orange-300 ">home</li>

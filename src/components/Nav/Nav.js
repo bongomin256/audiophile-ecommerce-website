@@ -3,10 +3,11 @@ import cart from "../../assets/shared/desktop/icon-cart.svg";
 import logo from "../../assets/shared/desktop/logo.svg";
 import mobileMenu from "../../assets/shared/tablet/icon-hamburger.svg";
 
-import Category from "../Category/Category";
+import Category from "../Category/CategoryHome";
 
 import { AiOutlineShoppingCart, AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { NavLink, Link } from "react-router-dom";
 
 function Nav() {
   const flexBetween = "flex items-center justify-between";
@@ -32,8 +33,9 @@ function Nav() {
           />
         </div>
         <div>
-          <img src={logo} alt="logo" />
-          {/* <h1 className="text-3xl font-bold font-manrope ">audiophile</h1> */}
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
         </div>
 
         <nav
@@ -44,10 +46,20 @@ function Nav() {
           onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
         >
           <ul className={`${flexBetween} gap-6 uppercase lg:gap-10`}>
-            <li className="hover:text-orange-300">Home</li>
-            <li className="hover:text-orange-300">Headphones</li>
-            <li className="hover:text-orange-300">Speakers</li>
-            <li className="hover:text-orange-300">Ear Phones</li>
+            <li className="hover:text-orange-300">
+              <NavLink to="/" exact>
+                Home
+              </NavLink>
+            </li>
+            <li className="hover:text-orange-300">
+              <NavLink to="headphones">Headphones</NavLink>
+            </li>
+            <li className="hover:text-orange-300">
+              <NavLink to="speakers">Speakers</NavLink>
+            </li>
+            <li className="hover:text-orange-300">
+              <NavLink to="earphones">Earphones</NavLink>
+            </li>
           </ul>
         </nav>
         <img src={cart} alt="cart" />
