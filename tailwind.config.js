@@ -17,11 +17,16 @@ module.exports = {
         mobileHeader: "url('/public/assets/home/mobile/image-header.jpg')",
         tabletHeader: "url('/public/assets/home/tablet/image-header.jpg')",
         desktopHeader: "url('/public/assets/home/desktop/image-hero.jpg')",
-        zx7MobileHome: "url('public/assets/home/mobile/image-speaker-zx7.jpg)",
-        zx7TabletHome: "url('public/assets/home/tablet/image-speaker-zx7.jpg)",
-        zx7DesktopHome:
-          "url('public/assets/home/desktop/image-speaker-zx7.jpg)",
+        mobileZx7Home:
+          "url('/public/assets/home/mobile/image-speaker-zx7.jpg')",
+        tabletZx7Home:
+          "url('/public/assets/home/tablet/image-speaker-zx7.jpg')",
+        desktopZx7Home:
+          "url('/public/assets/home/desktop/image-speaker-zx7.jpg')",
         circlePattern: "url('/public/assets/home/desktop/pattern-circles.svg')",
+        zx9Mobile: "url('/public/assets/home/mobile/image-speaker-zx9.png')",
+        zx9Tablet: "url('/public/assets/home/tablet/image-speaker-zx9.png')",
+        zx9Desktop: "url('/public/assets/home/desktop/image-speaker-zx9.png')",
       },
       fontFamily: {
         manrope: ["Manrope", "sans - serif"],

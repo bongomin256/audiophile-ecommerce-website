@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function Footor() {
   return (
-    <footer className="flex flex-col items-center justify-center gap-10 px-10 py-10 bg-black mt-28 md:items-start md:px-16 lg:px-28">
+    <footer className="flex flex-col items-center justify-center gap-10 px-10 py-10 bg-black mt-28 md:items-start md:px-16 lg:px-40">
       <section className="flex flex-col gap-10 lg:flex-row lg:justify-between lg:w-full">
         <div className="logo">
           <Link to="/">

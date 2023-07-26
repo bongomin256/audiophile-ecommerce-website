@@ -1,7 +1,8 @@
 import React from "react";
+import PagesLayout from "../components/PagesLayout/PagesLayout";
 
 const Speaker = () => {
-  return <div>Speaker</div>;
+  return <PagesLayout />;
 };
 
 export default Speaker;

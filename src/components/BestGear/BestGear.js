@@ -4,14 +4,14 @@ import bestGearDesktop from "../../assets/shared/desktop/image-best-gear.jpg";
 
 const bestGear = () => {
   return (
-    <section className="px-8 mt-24 md:px-16 lg:px-28">
+    <section className="px-8 mt-24 md:px-16 lg:px-40">
       <article className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
         {/* className="flex flex-col gap-10 lg:items-center lg:flex-row" */}
         <picture className="lg:order-2">
           <source media="(min-width: 1024px)" srcset={bestGearDesktop} alt="" />
           <source media="(min-width: 768px )" srcset={bestGearTablet} alt="" />
           <img
-            className="rounded-lg lg:w-full md:mb-12"
+            className="mb-10 rounded-lg  md:mb-12 lg:h-[588px] lg:w-full lg:mb-0"
             // lg:flex-1
             src={bestGearMobile}
             alt=""
