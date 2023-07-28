@@ -15,7 +15,7 @@ function Nav() {
   return (
     <>
       <header
-        className={`top-0 py-10 px-8 fixed z-30 w-full lg:px-40 border-b border-gray-600  `}
+        className={`top-0 py-10 px-8 fixed z-30 w-full lg:px-40 border-b border-gray-600 bg-[#1a1a1a] `}
       >
         <nav
           className={`${flexBetween}   text-white`}

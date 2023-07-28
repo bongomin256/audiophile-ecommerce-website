@@ -5,12 +5,13 @@ import Nav from "../Nav/Nav";
 
 const MainLayout = ({ children }) => {
   return (
-    <main>
+    <>
       <Nav />
-      {children}
+      <main className="mt-20">{children}</main>
+
       <Footor />
       {/* <Overlay /> */}
-    </main>
+    </>
   );
 };
 
