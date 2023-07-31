@@ -1,7 +1,6 @@
 import Category from "../Category/CategoryHome";
 import BestGear from "../Shared/BestGear/BestGear";
 import MainLayout from "../Shared/Main/Main";
-// import PagesLayout from "../PagesLayout/PagesLayout";
 
 const HeadphoneScence = () => {
   return (
@@ -13,7 +12,6 @@ const HeadphoneScence = () => {
       </section>
       <Category />
       <BestGear />
-      {/* <BestGear /> */}
     </MainLayout>
   );
 };

@@ -4,7 +4,6 @@ import Speakers from "./ui/Speakers";
 import Earphones from "./ui/Earphones";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import CategoryConstant from "./pages/CategoryConstant";
 import Headphones from "./ui/Headphones";
 
 function App() {
