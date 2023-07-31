@@ -1,9 +1,7 @@
-import zx9Mobile from "../../assets/home/mobile/image-speaker-zx9.png";
-import zx9Tablet from "../../assets/home/tablet/image-speaker-zx9.png";
-import zx9Desktop from "../../assets/home/desktop/image-speaker-zx9.png";
-import patternCircle from "../../assets/home/desktop/pattern-circles.svg";
-import { ActionButtonSolid } from "../Shared/ActionButtons";
-// import circle from "../../assets/home/desktop/pattern-circles.svg";
+import zx9Mobile from "../../../assets/home/mobile/image-speaker-zx9.png";
+import zx9Tablet from "../../../assets/home/tablet/image-speaker-zx9.png";
+import zx9Desktop from "../../../assets/home/desktop/image-speaker-zx9.png";
+import { ActionButtonSolid } from "../../Shared/ActionButtons";
 
 const Zx9Speaker = () => {
   return (

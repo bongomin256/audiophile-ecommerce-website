@@ -1,6 +1,6 @@
-import MainLayout from "../Main/Main";
 import Category from "../Category/CategoryHome";
-import BestGear from "../BestGear/BestGear";
+import BestGear from "../Shared/BestGear/BestGear";
+import MainLayout from "../Shared/Main/Main";
 // import PagesLayout from "../PagesLayout/PagesLayout";
 
 const HeadphoneScence = () => {
@@ -13,17 +13,8 @@ const HeadphoneScence = () => {
       </section>
       <Category />
       <BestGear />
+      {/* <BestGear /> */}
     </MainLayout>
-    // <PagesLayout>
-    //   <section className="relative h-screen mb-32 top-30">
-    //     {/* className="px-8 mt-8 md:px-16 lg:px-40" */}
-    //     <div className="">
-    //       <h2 className="z-40 text-2xl font-bold text-black uppercase">
-    //         Headphones
-    //       </h2>
-    //     </div>
-    //   </section>
-    // </PagesLayout>
   );
 };
 

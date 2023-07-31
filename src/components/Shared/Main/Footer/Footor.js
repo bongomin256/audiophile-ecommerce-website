@@ -1,8 +1,9 @@
 import React from "react";
-import fbIcon from "../../assets/shared/desktop/icon-facebook.svg";
-import instagramIcon from "../../assets/shared/desktop/icon-instagram.svg";
-import twitterIcon from "../../assets/shared/desktop/icon-twitter.svg";
-import logo from "../../assets/shared/desktop/logo.svg";
+import fbIcon from "../../../../assets/shared/desktop/icon-facebook.svg";
+import instagramIcon from "../../../../assets/shared/desktop/icon-instagram.svg";
+import twitterIcon from "../../../../assets/shared/desktop/icon-twitter.svg";
+import logo from "../../../../assets/shared/desktop/logo.svg";
+
 import { Link } from "react-router-dom";
 
 function Footor() {
@@ -31,7 +32,7 @@ function Footor() {
           </p>
         </div>
         <div className="md:flex md:justify-between lg:justify-between">
-          <p className="mb-[2.5rem] text-center">
+          <p className="mb-[2.5rem] text-center ">
             Copyright 2021. All Rights Reserved
           </p>
           <div className="flex justify-center gap-4 text-center cursor-pointer social-icons">

@@ -1,12 +1,11 @@
 import { useState } from "react";
-import cart from "../../assets/shared/desktop/icon-cart.svg";
-import logo from "../../assets/shared/desktop/logo.svg";
-import mobileMenu from "../../assets/shared/tablet/icon-hamburger.svg";
+import cart from "../../../../assets/shared/desktop/icon-cart.svg";
+import logo from "../../../../assets/shared/desktop/logo.svg";
+import mobileMenu from "../../../../assets/shared/tablet/icon-hamburger.svg";
 
 // import { AiOutlineShoppingCart, AiOutlineClose } from "react-icons/ai";
 
 import { NavLink, Link } from "react-router-dom";
-import SmallScreenMenu from "../Shared/SmallScreenMenu";
 
 function Nav() {
   const flexBetween = "flex items-center justify-between";
@@ -15,7 +14,7 @@ function Nav() {
   return (
     <>
       <header
-        className={`top-0 py-10 px-8 fixed z-30 w-full lg:px-40 border-b border-gray-600 bg-[#1a1a1a] `}
+        className={`top-0 py-10 px-8 sticky z-30 w-full lg:px-40 border-b border-gray-600 bg-[#1a1a1a] `}
       >
         <nav
           className={`${flexBetween}   text-white`}

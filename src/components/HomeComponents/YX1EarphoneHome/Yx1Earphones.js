@@ -1,7 +1,7 @@
-import yx1Mobile from "../../assets/home/mobile/image-earphones-yx1.jpg";
-import yx1Tablet from "../../assets/home/tablet/image-earphones-yx1.jpg";
-import yx1Desktop from "../../assets/home/desktop/image-earphones-yx1.jpg";
-import { ActionButtonOuline } from "../Shared/ActionButtons";
+import yx1Mobile from "../../../assets/home/mobile/image-earphones-yx1.jpg";
+import yx1Tablet from "../../../assets/home/tablet/image-earphones-yx1.jpg";
+import yx1Desktop from "../../../assets/home/desktop/image-earphones-yx1.jpg";
+import { ActionButtonOuline } from "../../Shared/ActionButtons";
 
 const Yx1Earphones = () => {
   return (
@@ -21,9 +21,6 @@ const Yx1Earphones = () => {
             <h2 className="text-4xl text-black uppercase font-[500] mb-6 md:mb-8 md:text-3xl">
               yx1 earphones
             </h2>
-            {/* <button className="px-6 py-4 font-semibold tracking-widest uppercase border text-black-10 border-black-10 hover:bg-black hover:text-white">
-            see product
-          </button> */}
             <ActionButtonOuline>see product</ActionButtonOuline>
           </div>
         </section>

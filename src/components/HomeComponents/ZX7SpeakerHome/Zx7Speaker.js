@@ -1,4 +1,4 @@
-import { ActionButtonOuline } from "../Shared/ActionButtons";
+import { ActionButtonOuline } from "../../Shared/ActionButtons";
 
 function Zx7Speaker() {
   return (
