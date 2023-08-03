@@ -1,4 +1,3 @@
-import React from "react";
 import Footor from "./Footer/Footor";
 import Nav from "./Nav/Nav";
 
