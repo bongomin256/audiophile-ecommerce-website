@@ -3,16 +3,18 @@ import { Link } from "react-router-dom";
 import Category from "../Category/CategoryHome";
 import { ActionButtonSolid } from "../Shared/ActionButtons";
 import BestGear from "../Shared/BestGear/BestGear";
-import MainLayout from "../Shared/Main/Main";
 
 // IMPORTING IMAGES
 import markTwoHeadphonesDesktop from "../../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg";
 import markTwoHeadphonesTablet from "../../assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg";
 import markTwoHeadphonesMobile from "../../assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg";
 
+//IMPORTING LAYOUT
+import CategoryLayout from "../Shared/Layouts/CategoryLayout";
+
 const HeadphoneScence = () => {
   return (
-    <MainLayout>
+    <CategoryLayout>
       <section className="top-50 mb-[10rem]">
         <div className="text-center bg-black">
           <h2 className="py-10 text-3xl font-semibold text-white uppercase">
@@ -55,16 +57,14 @@ const HeadphoneScence = () => {
                   sound.
                 </p>
               </div>
-              <Link to="/headphones/xx99-mark-one-headphones">
+              <Link to="/headphones/xx99-mark-two-headphones">
                 <ActionButtonSolid>see product</ActionButtonSolid>
               </Link>
             </section>
           </article>
         </section>
       </section>
-      <Category />
-      <BestGear />
-    </MainLayout>
+    </CategoryLayout>
   );
 };
 
