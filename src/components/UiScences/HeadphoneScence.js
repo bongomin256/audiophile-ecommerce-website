@@ -55,7 +55,7 @@ const HeadphoneScence = () => {
                   sound.
                 </p>
               </div>
-              <Link to="/xx99-mark-two-headphones">
+              <Link to="/headphones/xx99-mark-one-headphones">
                 <ActionButtonSolid>see product</ActionButtonSolid>
               </Link>
             </section>
