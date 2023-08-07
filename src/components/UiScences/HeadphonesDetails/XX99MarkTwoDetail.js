@@ -46,7 +46,7 @@ const XX99MarkTwoDetail = () => {
                   new product
                 </h4>
                 <div className="mt-[20px]  md:text-start  lg:text-start">
-                  <h2 className="font-[700] uppercase text-4xl font-manrope tracking-[1px] md:px-20 md:tracking-[1.43px] lg:px-0">
+                  <h2 className="font-[700] uppercase text-4xl font-manrope tracking-[1px]  md:tracking-[1.43px] lg:px-0">
                     xx9 mark ii headphones
                   </h2>
                 </div>

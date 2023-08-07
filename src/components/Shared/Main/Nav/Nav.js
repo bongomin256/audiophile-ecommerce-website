@@ -12,7 +12,7 @@ function Nav({ size }) {
   return (
     <>
       <header
-        className={`top-0 py-10 px-8 sticky z-30 w-full lg:px-40 border-b border-gray-600 bg-[#1a1a1a] `}
+        className={`top-0 py-10 px-8 sticky z-30 w-full md:px-16 lg:px-40 border-b border-gray-600 bg-[#1a1a1a] `}
       >
         <nav className={`${flexBetween}   text-white`}>
           <div
