@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 
-import Category from "../Category/CategoryHome";
-import { ActionButtonSolid } from "../Shared/ActionButtons";
-import BestGear from "../Shared/BestGear/BestGear";
+// import Category from "../Category/CategoryHome";
+// import { ActionButtonSolid } from "../Shared/ActionButtons";
+// import BestGear from "../Shared/BestGear/BestGear";
 
+import { ActionBtnCategorySolid } from "../Shared/ActionButtons";
 // IMPORTING IMAGES
 import markTwoHeadphonesDesktop from "../../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg";
 import markTwoHeadphonesTablet from "../../assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg";
@@ -58,7 +59,7 @@ const HeadphoneScence = () => {
                 </p>
               </div>
               <Link to="/headphones/xx99-mark-two-headphones">
-                <ActionButtonSolid>see product</ActionButtonSolid>
+                <ActionBtnCategorySolid>see product</ActionBtnCategorySolid>
               </Link>
             </section>
           </article>

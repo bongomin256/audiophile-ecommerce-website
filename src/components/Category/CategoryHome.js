@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import rightArrow from "../../assets/shared/desktop/icon-arrow-right.svg";
 import headphone from "../../assets/shared/desktop/image-category-thumbnail-headphones.png";
 import earphone from "../../assets/shared/desktop/image-category-thumbnail-earphones.png";
@@ -19,10 +20,13 @@ const Category = () => {
               <h3 className="mb-2 text-base font-bold text-black uppercase">
                 headphones
               </h3>
-              <p className="flex items-center justify-center gap-2 text-sm uppercase">
+              <Link
+                to="/headphones"
+                className="flex items-center justify-center gap-2 text-sm uppercase"
+              >
                 shop
                 <img src={rightArrow} alt="right arrow" />
-              </p>
+              </Link>
             </div>
           </div>
         </div>
@@ -38,10 +42,13 @@ const Category = () => {
               <h3 className="mb-2 text-base font-bold text-black uppercase ">
                 speakers
               </h3>
-              <p className="flex items-center justify-center gap-2 text-sm uppercase">
+              <Link
+                to="/speakers"
+                className="flex items-center justify-center gap-2 text-sm uppercase"
+              >
                 shop
                 <img src={rightArrow} alt="right arrow" />
-              </p>
+              </Link>
             </div>
           </div>
         </div>
@@ -57,10 +64,13 @@ const Category = () => {
               <h3 className="mb-2 text-base font-bold text-black uppercase ">
                 earphones
               </h3>
-              <p className="flex items-center justify-center gap-2 text-sm font-semibold uppercase font text-grayHover">
+              <Link
+                to="/earphones"
+                className="flex items-center justify-center gap-2 text-sm font-semibold uppercase font text-grayHover"
+              >
                 shop
                 <img src={rightArrow} alt="right arrow" />
-              </p>
+              </Link>
             </div>
           </div>
         </div>

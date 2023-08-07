@@ -5,7 +5,7 @@ import mobileMenu from "../../../../assets/shared/tablet/icon-hamburger.svg";
 
 import { NavLink, Link } from "react-router-dom";
 
-function Nav() {
+function Nav({ size }) {
   const flexBetween = "flex items-center justify-between";
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
 
@@ -47,7 +47,14 @@ function Nav() {
               <NavLink to="/earphones">Earphones</NavLink>
             </li>
           </ul>
-          <img src={cart} alt="cart" />
+          <div className={`${flexBetween} relative`}>
+            <span className="pointer">
+              <img src={cart} alt="cart" />
+            </span>
+            <span className="absolute top-[-1] text-white bg-red-400 rounded-full left-5 p-1">
+              {size}
+            </span>
+          </div>
         </nav>
       </header>
     </>

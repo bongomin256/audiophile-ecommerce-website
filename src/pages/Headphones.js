@@ -3,8 +3,12 @@ import React from "react";
 // import HeadphoneCategories from "../components/Category/HeadphoneCategories";
 import HeadphoneScence from "../components/UiScences/HeadphoneScence";
 
-const Headphones = () => {
+const Headphones = ({ cart, setCart }) => {
+  // const addToCart = (data) => {
+  //   console.log(data);
+  // };
   return <HeadphoneScence />;
+  // return <HeadphoneScence addToCart={addToCart} />;
 };
 
 export default Headphones;

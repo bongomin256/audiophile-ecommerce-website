@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Hero() {
   const flexBetween = "flex items-center justify-center ";
   return (
@@ -21,9 +23,11 @@ function Hero() {
             </p>
           </div>
 
-          <button className="px-6 py-4 tracking-widest text-white uppercase bg-orange-300 hover:bg-orange-100">
-            see product
-          </button>
+          <Link to="/headphones/xx99-mark-two-headphones">
+            <button className="px-6 py-4 tracking-widest text-white uppercase bg-orange-300 hover:bg-orange-100">
+              see product
+            </button>
+          </Link>
         </div>
       </section>
     </>
