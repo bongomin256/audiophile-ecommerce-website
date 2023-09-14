@@ -1,17 +1,24 @@
 import { useParams, Link } from "react-router-dom";
-
+import { useState } from "react";
 import CategoryLayout from "../../Shared/Layouts/CategoryLayout";
 
 import data from "../../../data.json";
 import { ActionBtnCategorySolid } from "../../Shared/ActionButtons";
 
-const XX99MarkTwoDetail = () => {
+const XX99MarkTwoDetail = ({ productId }) => {
+  const productData = data.find(({ slug }) => slug === productId);
+
+  const [quantity, setQuantity] = useState(1);
   const markTwoHeadphones = data[3];
   const { id } = useParams();
 
   const addToCart = (markTwoHeadphones) => {
     console.log(markTwoHeadphones);
   };
+
+  //  const addToCart = (markTwoHeadphones) => {
+  //    console.log(markTwoHeadphones);
+  //  };
 
   return (
     <CategoryLayout>
@@ -26,11 +33,11 @@ const XX99MarkTwoDetail = () => {
               <picture>
                 <source
                   media="(min-width:1024px )"
-                  srcset={markTwoHeadphones.categoryImage.desktop}
+                  srcSet={markTwoHeadphones.categoryImage.desktop}
                 />
                 <source
                   media="(min-width: 768px)"
-                  srcset={markTwoHeadphones.categoryImage.tablet}
+                  srcSet={markTwoHeadphones.categoryImage.tablet}
                 />
                 <img
                   className="rounded-lg"
@@ -55,16 +62,26 @@ const XX99MarkTwoDetail = () => {
                     {markTwoHeadphones.description}
                   </p>
                 </div>
-                <p className="mb-5">$ {markTwoHeadphones.price}</p>
-                <div className="flex gap-3">
+                <p className="mb-5 text-lg font-bold">
+                  $ {markTwoHeadphones.price}
+                </p>
+                <div className="flex gap-3 cursor-pointer">
                   <div className="flex gap-8 px-6 py-4 bg-gray-30">
-                    <button className="text-xl font-bold text-grayHover">
+                    <span
+                      onClick={() => quantity > 1 && setQuantity(quantity - 1)}
+                      className="text-xl font-bold text-grayHover"
+                    >
                       -
-                    </button>
-                    <span className="text-xl font-bold text-black">1</span>
-                    <button className="text-xl font-bold text-grayHover">
+                    </span>
+                    <span className="text-xl font-bold text-black">
+                      {quantity}
+                    </span>
+                    <span
+                      onClick={() => setQuantity(quantity + 1)}
+                      className="text-xl font-bold text-grayHover"
+                    >
                       +
-                    </button>
+                    </span>
                   </div>
                   <ActionBtnCategorySolid
                     onClick={() => addToCart(markTwoHeadphones)}

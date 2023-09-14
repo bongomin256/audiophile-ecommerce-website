@@ -260,15 +260,15 @@
     "slug": "xx99-mark-two-headphones",
     "name": "XX99 Mark II Headphones",
     "image": {
-      "mobile": "./assets/product-xx99-mark-two-headphones/mobile/image-product.jpg",
-      "tablet": "./assets/product-xx99-mark-two-headphones/tablet/image-product.jpg",
-      "desktop": "./assets/product-xx99-mark-two-headphones/desktop/image-product.jpg"
+      "mobile": "/assets/product-xx99-mark-two-headphones/mobile/image-product.jpg",
+      "tablet": "/assets/product-xx99-mark-two-headphones/tablet/image-product.jpg",
+      "desktop": "/assets/product-xx99-mark-two-headphones/desktop/image-product.jpg"
     },
     "category": "headphones",
     "categoryImage": {
-      "mobile": "public/assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg",
-      "tablet": "./assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg",
-      "desktop": "./assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg"
+      "mobile": "/assets/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg",
+      "tablet": "/assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg",
+      "desktop": "/assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg"
     },
     "new": true,
     "price": 2999,
