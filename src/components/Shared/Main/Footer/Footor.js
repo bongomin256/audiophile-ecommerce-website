@@ -16,10 +16,18 @@ function Footor() {
           </Link>
         </div>
         <ul className="flex flex-col justify-center gap-4 font-semibold tracking-widest text-center uppercase cursor-pointer text-gray-30 md:flex-row">
-          <li className="hover:text-orange-300 ">home</li>
-          <li className="hover:text-orange-300">headphones</li>
-          <li className="hover:text-orange-300">speakers</li>
-          <li className="hover:text-orange-300">earphones</li>
+          <li className="hover:text-orange-300 ">
+            <Link to="/"></Link>home
+          </li>
+          <li className="hover:text-orange-300">
+            <Link to="/headphones">headphones</Link>
+          </li>
+          <li className="hover:text-orange-300">
+            <Link to="/speakers">speakers</Link>
+          </li>
+          <li className="hover:text-orange-300">
+            <Link to="/earphones">earphones</Link>
+          </li>
         </ul>
       </section>
       <section>

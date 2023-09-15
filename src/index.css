@@ -12,3 +12,7 @@ body,
   font-family: "Manrope", sans-serif;
   @apply text-gray-600;
 }
+
+.product__listing .product__name:nth-last-child(even) .product__img {
+  order: 2;
+}
