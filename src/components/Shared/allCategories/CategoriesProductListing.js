@@ -10,7 +10,7 @@ const CategoriesProductListing = ({ productCategoryName }) => {
         const mobileImg = product.categoryImage.mobile;
         const newPro = product.new;
         return (
-          <section className="product__name grid gap-[32px] px-8 lg:grid-cols-2 lg:items-center lg:px-40 mt-14">
+          <section className="product__name lg:grid gap-[32px] px-8 lg:grid-cols-2 lg:items-center lg:px-40 mt-14">
             <picture className="product__img">
               <source media="(min-width:1024px )" srcSet={desktopImg} />
               <source media="(min-width: 768px)" srcSet={tabletImg} />
@@ -32,7 +32,7 @@ const CategoriesProductListing = ({ productCategoryName }) => {
                   {product.description}
                 </p>
               </div>
-              <Link to={`/${product.slug}`}>
+              <Link to={`/${product.category}/${product.slug}`}>
                 <ActionBtnCategorySolid>see product</ActionBtnCategorySolid>
               </Link>
             </section>

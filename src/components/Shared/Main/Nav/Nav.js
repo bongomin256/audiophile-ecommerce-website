@@ -149,7 +149,7 @@ function Nav({ size }) {
               </NavLink>
             </li>
           </ul> */}
-          <ul className="mt-40 ">
+          <ul onClick={() => setIsMobileNavOpen(false)} className="mt-40 ">
             <Category />
           </ul>
         </div>

@@ -8,7 +8,7 @@ const CategoriesPages = ({ categoryName }) => {
     .reverse();
   return (
     <CategoryLayout>
-      <section>
+      <section className="mb-[10rem]">
         <div className="text-center bg-black">
           <h2 className="py-10 text-3xl font-semibold text-white uppercase">
             {categoryName}
