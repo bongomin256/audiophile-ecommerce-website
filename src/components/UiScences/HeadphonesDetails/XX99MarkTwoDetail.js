@@ -69,7 +69,7 @@ const XX99MarkTwoDetail = ({ productId }) => {
                   <div className="flex gap-8 px-6 py-4 bg-gray-30">
                     <span
                       onClick={() => quantity > 1 && setQuantity(quantity - 1)}
-                      className="text-xl font-bold text-grayHover"
+                      className="text-xl font-bold text-grayHove hover:text-orange-300"
                     >
                       -
                     </span>
@@ -78,7 +78,7 @@ const XX99MarkTwoDetail = ({ productId }) => {
                     </span>
                     <span
                       onClick={() => setQuantity(quantity + 1)}
-                      className="text-xl font-bold text-grayHover"
+                      className="text-xl font-bold text-grayHover hover:text-orange-300"
                     >
                       +
                     </span>

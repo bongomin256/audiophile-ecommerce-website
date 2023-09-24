@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ActionBtnCategorySolid } from "../ActionButtons";
+import { ActionBtnCategorySolid } from "../../components/Shared/ActionButtons";
 
 const CategoriesProductListing = ({ productCategoryName }) => {
   return (
@@ -32,7 +32,8 @@ const CategoriesProductListing = ({ productCategoryName }) => {
                   {product.description}
                 </p>
               </div>
-              <Link to={`/${product.category}/${product.slug}`}>
+              {/* <Link to={`/${product.category}/${product.slug}`}></Link> */}
+              <Link to={`/${product.slug}`}>
                 <ActionBtnCategorySolid>see product</ActionBtnCategorySolid>
               </Link>
             </section>

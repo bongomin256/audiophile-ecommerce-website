@@ -1,15 +1,10 @@
 import { createContext, useContext, useState } from "react";
 
-const CartContext = createContext({
-  //   getItemQty,
-  //   increaseCartQty,
-  //   decreaseCartQty,
-  //   removeFromCart,
-});
+const CartContext = createContext();
 
-const UseCartContext = () => {
-  return useContext(CartContext);
-};
+// const UseCartContext = () => {
+//   return useContext(CartContext);
+// };
 
 const CartContextProvider = ({ children }) => {
   const [cartItem, setCartItem] = useState([]);
@@ -26,10 +21,21 @@ const CartContextProvider = ({ children }) => {
     });
   };
 
+  const addToCart = (slug, count) => {
+    for (let i = 0; i < count; i++) {
+      setCartItem((prevState) => [...prevState, slug]);
+      console.log(cartItem);
+    }
+  };
+  // const addToCart = (productDetail) => {
+  //   console.log(productDetail);
+  // };
+
   return (
-    <CartContext.Provider value={{ getItemQty, increaseCartQty }}>
+    <CartContext.Provider value={{ addToCart, increaseCartQty, getItemQty }}>
       {children}
     </CartContext.Provider>
   );
 };
-export { UseCartContext, CartContextProvider };
+
+export { CartContext, CartContextProvider };

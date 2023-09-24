@@ -1,5 +1,5 @@
-import data from "../../../data.json";
-import CategoryLayout from "../Layouts/CategoryLayout";
+import data from "../../data.json";
+import CategoryLayout from "../../components/Shared/Layouts/CategoryLayout";
 import CategoriesProductListing from "./CategoriesProductListing";
 
 const CategoriesPages = ({ categoryName }) => {
