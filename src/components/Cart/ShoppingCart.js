@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MainLayout from "../Shared/Main/Main";
+import {
+  ActionBtnCategorySolid,
+  ActionButtonSolid,
+} from "../Shared/ActionButtons";
 
 const ShoppingCart = ({ cart }) => {
   console.log(cart);
@@ -30,15 +34,16 @@ const ShoppingCart = ({ cart }) => {
         )}
         {cart.length > 0 && (
           <div className="">
-            <div className="flex justify-between ">
+            <div className="flex justify-between mb-5">
               <p>
                 Cart (<span>{cart.length}</span>)
               </p>
               <button>remove all</button>
             </div>
             {cart.map((product) => (
-              <div key={product.id} className="grid grid-cols-3">
-                <div>
+              <div key={product.id} className="grid grid-cols-3 gap-3 mb-5">
+                {/* grid grid-cols-3 gap-3 flex items-center */}
+                <div className="">
                   {/* <img src={product.image.mobile} alt="" /> */}
                   <img src={`./assets/cart/image-${product.slug}.jpg`} alt="" />
                 </div>
@@ -47,6 +52,14 @@ const ShoppingCart = ({ cart }) => {
                   <p>$ {product.price.toLocaleString()}</p>
                 </div>
                 <div>
+                  <button className="flex gap-5 px-4 py-2 bg-gray-30">
+                    <span>-</span>
+                    <div>{product.quantityCount}</div>
+                    <span>+</span>
+                  </button>
+                </div>
+
+                {/* <div>
                   <div>
                     <span>-</span>
                   </div>
@@ -54,14 +67,22 @@ const ShoppingCart = ({ cart }) => {
                   <div>
                     <span>+</span>
                   </div>
-                </div>
+                </div> */}
               </div>
             ))}
-            <div>
-              <p className="text-red-600">total</p>
-              <p className="text-red-600">
-                $ {totalPrice(cart).toLocaleString()}
-              </p>
+            <div className="mt-8">
+              <div className="flex justify-between mb-5">
+                <p className="font-medium uppercase text-text-base">total</p>
+                <p className="text-red-600">
+                  $ {totalPrice(cart).toLocaleString()}
+                </p>
+              </div>
+              <div>
+                <button className="w-full px-6 py-4 tracking-widest text-white uppercase transition-all duration-300 ease-in-out bg-orange-300 hover:bg-orange-100">
+                  checkout
+                </button>
+                {/* <ActionBtnCategorySolid>checkout</ActionBtnCategorySolid> */}
+              </div>
             </div>
           </div>
         )}
