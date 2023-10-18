@@ -3,22 +3,29 @@ import { useContext, useState } from "react";
 // importing buttons from shared components directory
 import { ActionBtnCategorySolid } from "../../components/Shared/ActionButtons";
 import OtherProducts from "./OtherProducts";
-import { CartContext, UseCartContext } from "../../context/CartContext";
+// import { CartContext, UseCartContext } from "../../context/CartContext";
 
-const ProductCategoryPreview = ({ productDetail }) => {
+const ProductCategoryPreview = ({
+  productDetail,
+  addProductToCart,
+  quantityCount,
+  setQuantityCount,
+  alertMessage,
+  //   handleAddToCart,
+}) => {
   //splitiing the features contents into new line
   const [firstFeature, secondFeature] = productDetail.features.split("\n\n");
   const gallery = productDetail.gallery;
-  const [quantity, setQuantity] = useState(1);
+  //   const [quantity, setQuantity] = useState(1);
 
-  const { slug } = productDetail;
-  const { addToCart } = useContext(CartContext);
+  //   const { slug } = productDetail;
+  //   const { addProductToCart } = useContext(CartContext);
 
   // function to add to cart
 
-  const handleAddToCart = () => {
-    return addToCart(slug, quantity);
-  };
+  //   const handleAddToCart = () => {
+  //     return addToCart(slug, quantity);
+  //   };
 
   return (
     <section className="mt-14">
@@ -54,23 +61,32 @@ const ProductCategoryPreview = ({ productDetail }) => {
           <div className="flex gap-3 cursor-pointer">
             <div className="flex gap-8 px-6 py-4 bg-gray-30">
               <span
-                onClick={() => quantity > 1 && setQuantity(quantity - 1)}
+                onClick={() =>
+                  quantityCount > 1 && setQuantityCount(quantityCount - 1)
+                }
+                // onChange={() => setQuantityCount(quantityCount)}
                 className="text-xl font-bold text-grayHover hover:text-orange-300"
               >
                 -
               </span>
-              <span className="text-xl font-bold text-black">{quantity}</span>
+              <span className="text-xl font-bold text-black">
+                {quantityCount}
+              </span>
               <span
-                onClick={() => setQuantity(quantity + 1)}
+                onClick={() => setQuantityCount(quantityCount + 1)}
+                // onChange={() => setQuantityCount(quantityCount)}
                 className="text-xl font-bold text-grayHover hover:text-orange-300"
               >
                 +
               </span>
             </div>
-            <ActionBtnCategorySolid onClick={() => handleAddToCart()}>
-              add to cart
-            </ActionBtnCategorySolid>
+            <div onClick={() => addProductToCart(productDetail)}>
+              <ActionBtnCategorySolid>add to cart</ActionBtnCategorySolid>
+            </div>
           </div>
+          {alertMessage && (
+            <p className="text-red-300">Item is already added to your cart!</p>
+          )}
         </section>
       </section>
       <section className=" mt-20 grid gap-20 lg:grid-cols-2 lg:justify-between lg:gap-[125px]">
@@ -117,6 +133,7 @@ const ProductCategoryPreview = ({ productDetail }) => {
           ))}
         </div>
       </section>
+
       <OtherProducts productDetail={productDetail} />
     </section>
   );

@@ -2,6 +2,7 @@ import { useState } from "react";
 import data from "./data.json";
 //* Pages
 import Home from "./pages/Home";
+import Cart from "./pages/Cart";
 import Speakers from "./pages/Speakers";
 import Earphones from "./pages/Earphones";
 // import HeadphonesDetailPage from "./components/UiScences/HeadphonesDetails/XX99MarkTwoDetail";
@@ -22,7 +23,7 @@ function App() {
     <Route
       key={category}
       path={`/${category}`}
-      element={<CategoriesPages categoryName={category} />}
+      element={<CategoriesPages cart={cart} categoryName={category} />}
     />
   ));
 
@@ -32,24 +33,30 @@ function App() {
       key={id}
       path={`/${slug}`}
       // path={`/${category}/:id`}
-      element={<AllCategoriesProductDetailPages productId={id} />}
+      element={
+        <AllCategoriesProductDetailPages
+          cart={cart}
+          setCart={setCart}
+          productId={id}
+        />
+      }
     />
   ));
 
   return (
-    <CartContextProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home cart={cart} />} />
-          {categoriesRoutes}
-          {productDetailsRoutes}
-          {/* <Route path="/headphones" element={<Headphones />} />
-        <Route path="/headphones/:id" element={<XX99MarkTwoDetail />} />
-        <Route path="/speakers" element={<Speakers />} />
-        <Route path="/earphones" element={<Earphones />} /> */}
-        </Routes>
-      </Router>
-    </CartContextProvider>
+    // <CartContextProvider>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home cart={cart} />} />
+        {categoriesRoutes}
+        {productDetailsRoutes}
+        <Route path="/cart" element={<Cart cart={cart} />} />
+        {/* <Route path="/headphones/:id" element={<XX99MarkTwoDetail />} /> */}
+        {/* <Route path="/speakers" element={<Speakers />} /> */}
+        {/* <Route path="/earphones" element={<Earphones />} /> */}
+      </Routes>
+    </Router>
+    // </CartContextProvider>
   );
 }
 

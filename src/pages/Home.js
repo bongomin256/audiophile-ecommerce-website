@@ -8,9 +8,9 @@ import BestGear from "../components/Shared/BestGear/BestGear";
 import Yx1Earphones from "../components/HomeComponents/YX1EarphoneHome/Yx1Earphones";
 import Zx7Speaker from "../components/HomeComponents/ZX7SpeakerHome/Zx7Speaker";
 
-function Home() {
+function Home({ cart }) {
   return (
-    <MainLayout>
+    <MainLayout cart={cart}>
       <Hero />
       <Category />
       <Zx9Speaker />

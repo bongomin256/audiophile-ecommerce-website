@@ -3,12 +3,14 @@ import Footor from "./Footer/Footor";
 import Nav from "./Nav/Nav";
 import ScrollToTop from "../ScrollToTop";
 
-const MainLayout = ({ children }) => {
-  const [cart, setCart] = useState([]);
+const MainLayout = ({ cart = [], children }) => {
+  // const [cart, setCart] = useState([]);
+  const cartSize = cart;
 
   return (
     <>
-      <Nav size={cart.length} />
+      <Nav cartSize={cartSize} />
+      {/* <Nav /> */}
       <ScrollToTop />
       <main className="">{children}</main>
       <Footor />

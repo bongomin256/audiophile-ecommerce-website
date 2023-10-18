@@ -23,7 +23,7 @@ function Hero() {
             </p>
           </div>
 
-          <Link to="/headphones/xx99-mark-two-headphones">
+          <Link to="/xx99-mark-two-headphones">
             <button className="px-6 py-4 tracking-widest text-white uppercase bg-orange-300 hover:bg-orange-100">
               see product
             </button>

@@ -2,12 +2,12 @@ import data from "../../data.json";
 import CategoryLayout from "../../components/Shared/Layouts/CategoryLayout";
 import CategoriesProductListing from "./CategoriesProductListing";
 
-const CategoriesPages = ({ categoryName }) => {
+const CategoriesPages = ({ categoryName, cart }) => {
   const productCategoryName = data
     .filter((product) => product.category === categoryName)
     .reverse();
   return (
-    <CategoryLayout>
+    <CategoryLayout cart={cart}>
       <section className="mb-[10rem]">
         <div className="text-center bg-black">
           <h2 className="py-10 text-3xl font-semibold text-white uppercase">

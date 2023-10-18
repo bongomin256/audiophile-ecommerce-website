@@ -1,14 +1,23 @@
-import { useState } from "react";
-import cart from "../../../../assets/shared/desktop/icon-cart.svg";
+import { useContext, useState } from "react";
+import cartIcon from "../../../../assets/shared/desktop/icon-cart.svg";
 import logo from "../../../../assets/shared/desktop/logo.svg";
 import mobileMenu from "../../../../assets/shared/tablet/icon-hamburger.svg";
 
 import { NavLink, Link } from "react-router-dom";
 import Category from "../../../Category/CategoryHome";
+import ShoppingCart from "../../../Cart/ShoppingCart";
+// import { CartContext } from "../../../../context/CartContext";
 
-function Nav({ size }) {
+function Nav({ cartSize }) {
+  // const { cartItem } = useContext(CartContext);
+  // console.log(cartItem);
+  // console.og(cartItem.length);
+
   const flexBetween = "flex items-center justify-between";
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  const [showCart, setShowCart] = useState(false);
+
+  // console.log(cartSize.length);
 
   return (
     // <>
@@ -100,19 +109,35 @@ function Nav({ size }) {
               <NavLink to="/earphones">Earphones</NavLink>
             </li>
           </ul>
-          <div className={`${flexBetween} relative`}>
-            <span className="pointer">
-              <img src={cart} alt="cart" />
-            </span>
-            <span className="absolute top-[-1] text-white bg-red-400 rounded-full left-5 p-1">
-              {size}
-            </span>
+
+          <div
+            // className={`${flexBetween} relative cursor-pointer`}
+            onClick={() => setShowCart(true)}
+          >
+            <Link
+              className={`${flexBetween} relative cursor-pointer`}
+              // to="/cart"
+            >
+              <span className="pointer">
+                <img src={cartIcon} alt="cart" />
+              </span>
+              {cartSize.length > 0 && (
+                <span className="absolute top-[-1] text-white bg-red-400 rounded-full left-5 p-1">
+                  {cartSize.length}
+                </span>
+              )}
+              {/* {cartItem.length > 0 && (
+              <span className="absolute top-[-1] text-white bg-red-400 rounded-full left-5 p-1">
+                {cartItem.length}
+              </span>
+            )} */}
+            </Link>
           </div>
         </nav>
       </header>
       {/* MOBILE and TABLET MENU */}
       {isMobileNavOpen && (
-        <div className="absolute none top-24 z-40 w-full h-fit pb-8 transition-all duration-300  bg-white md:h-[40%] lg:hidden rounded-b-lg">
+        <div className="absolute none top-24 z-40 w-full h-fit pb-8 transition-all duration-300  bg-[#00000055] md:h-[40%] lg:hidden rounded-b-lg">
           {/* <div className="absolute top-0 right-0 p-8">
             <img
               src={mobileMenu}
@@ -149,11 +174,13 @@ function Nav({ size }) {
               </NavLink>
             </li>
           </ul> */}
-          <ul onClick={() => setIsMobileNavOpen(false)} className="mt-40 ">
+          <ul onClick={() => setIsMobileNavOpen(false)} className="mt-40">
             <Category />
           </ul>
         </div>
       )}
+
+      {showCart && <ShoppingCart cart={cartSize} />}
     </>
   );
 }

@@ -3,9 +3,9 @@ import BestGear from "../../Shared/BestGear/BestGear";
 import MainLayout from "../../Shared/Main/Main";
 import Category from "../../Category/CategoryHome";
 
-const CategoryLayout = ({ children }) => {
+const CategoryLayout = ({ cart, children }) => {
   return (
-    <MainLayout>
+    <MainLayout cart={cart}>
       {children}
       <Category />
       <BestGear />
