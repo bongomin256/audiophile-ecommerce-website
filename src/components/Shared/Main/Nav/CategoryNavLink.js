@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom";
-import rightArrow from "../../assets/shared/desktop/icon-arrow-right.svg";
-import headphone from "../../assets/shared/desktop/image-category-thumbnail-headphones.png";
-import earphone from "../../assets/shared/desktop/image-category-thumbnail-earphones.png";
-import speaker from "../../assets/shared/desktop/image-category-thumbnail-speakers.png";
+import React from "react";
 
-const Category = ({ isMobileNavOpen }) => {
+import { Link } from "react-router-dom";
+import rightArrow from "../../../../assets/shared/desktop/icon-arrow-right.svg";
+import headphone from "../../../../assets/shared/desktop/image-category-thumbnail-headphones.png";
+import earphone from "../../../../assets/shared/desktop/image-category-thumbnail-earphones.png";
+import speaker from "../../../../assets/shared/desktop/image-category-thumbnail-speakers.png";
+
+const CategoryNavLink = () => {
   return (
-    <section className={`px-8 mt-[2.2rem]  md:mt-[8.5rem] md:px-16 lg:px-40 `}>
+    <section className={`px-8 mt-[2.2rem] md:px-16 lg:px-40 `}>
       <div className="grid items-center gap-20 md:grid-cols-3 md:gap-5 lg:gap-8 ">
         <div className=" md:mb-0 relative rounded-lg py-9 bg-gray-30  h-[165px] ">
           <div className="flex flex-col items-center justify-center ">
@@ -79,4 +81,4 @@ const Category = ({ isMobileNavOpen }) => {
   );
 };
 
-export default Category;
+export default CategoryNavLink;

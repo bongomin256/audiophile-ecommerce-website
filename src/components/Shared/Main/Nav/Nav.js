@@ -6,6 +6,8 @@ import mobileMenu from "../../../../assets/shared/tablet/icon-hamburger.svg";
 import { NavLink, Link } from "react-router-dom";
 import Category from "../../../Category/CategoryHome";
 import ShoppingCart from "../../../Cart/ShoppingCart";
+import CheckoutMain from "../../../../pages/checkoutPage/CheckoutMain";
+import CategoryNavLink from "./CategoryNavLink";
 // import { CartContext } from "../../../../context/CartContext";
 
 function Nav({ cartSize }) {
@@ -112,7 +114,7 @@ function Nav({ cartSize }) {
 
           <div
             // className={`${flexBetween} relative cursor-pointer`}
-            onClick={() => setShowCart(true)}
+            onClick={() => setShowCart(!showCart)}
           >
             <Link
               className={`${flexBetween} relative cursor-pointer`}
@@ -134,11 +136,33 @@ function Nav({ cartSize }) {
             </Link>
           </div>
         </nav>
+        {/* {isMobileNavOpen && (
+          <div
+            className="fixed top-0 bottom-0 left-0 right-0 w-full h-full bg-[#00000055] z-[1000]"
+            onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
+          ></div>
+        )} */}
+        {isMobileNavOpen && (
+          <div className="absolute left-0 w-full ">
+            <div
+              className="fixed top-0 bottom-0 left-0 right-0 w-full h-full bg-[#00000055] z-[1000] lg:none"
+              onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
+            ></div>
+            <ul
+              // onClick={() => setIsMobileNavOpen(false)}
+              className="sticky  w-full mt-6  overflow-y-auto transition-transform duration-500 ease-in-out transform translate-y-0 bg-white z-[1999]"
+            >
+              <div className="py-10 overflow-y-scroll md:py-14">
+                <CategoryNavLink isMobileNavOpen={isMobileNavOpen} />
+              </div>
+            </ul>
+          </div>
+        )}
       </header>
       {/* MOBILE and TABLET MENU */}
-      {isMobileNavOpen && (
-        <div className="absolute none top-24 z-40 w-full h-fit pb-8 transition-all duration-300  bg-[#00000055] md:h-[40%] lg:hidden rounded-b-lg">
-          {/* <div className="absolute top-0 right-0 p-8">
+      {/* {isMobileNavOpen && (
+        <div className="absolute none top-24 z-40 w-full h-fit pb-8 transition-all duration-300  bg-[#00000055] md:h-[40%] lg:hidden rounded-b-lg"> */}
+      {/* <div className="absolute top-0 right-0 p-8">
             <img
               src={mobileMenu}
               alt="mobile menu"
@@ -146,7 +170,7 @@ function Nav({ cartSize }) {
               className="cursor-pointer"
             />
           </div> */}
-          {/* <ul className="mt-40 text-center text-white">
+      {/* <ul className="mt-40 text-center text-white">
             <li className="my-4">
               <NavLink to="/" exact onClick={() => setIsMobileNavOpen(false)}>
                 Home
@@ -174,13 +198,18 @@ function Nav({ cartSize }) {
               </NavLink>
             </li>
           </ul> */}
-          <ul onClick={() => setIsMobileNavOpen(false)} className="mt-40">
+      {/* <ul onClick={() => setIsMobileNavOpen(false)} className="mt-40">
             <Category />
           </ul>
         </div>
+      )} */}
+      {showCart && (
+        <ShoppingCart
+          showCart={showCart}
+          setShowCart={setShowCart}
+          cart={cartSize}
+        />
       )}
-
-      {showCart && <ShoppingCart cart={cartSize} />}
     </>
   );
 }

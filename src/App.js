@@ -15,6 +15,7 @@ import CategoriesPages from "./pages/allCategoriesPages/AllCategories";
 // import AllCategoriesProductDetailPages from "./pages/detailsPages/AllCategoriesDetailPages";
 import AllCategoriesProductDetailPages from "./pages/detailsPages/AllCategoriesProductDetailPages";
 import { CartContextProvider } from "./context/CartContext";
+import CheckoutMain from "./pages/checkoutPage/CheckoutMain";
 function App() {
   const [cart, setCart] = useState([]);
 
@@ -50,7 +51,8 @@ function App() {
         <Route path="/" element={<Home cart={cart} />} />
         {categoriesRoutes}
         {productDetailsRoutes}
-        <Route path="/cart" element={<Cart cart={cart} />} />
+        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
+        <Route path="/checkout" element={<CheckoutMain />} />
         {/* <Route path="/headphones/:id" element={<XX99MarkTwoDetail />} /> */}
         {/* <Route path="/speakers" element={<Speakers />} /> */}
         {/* <Route path="/earphones" element={<Earphones />} /> */}
