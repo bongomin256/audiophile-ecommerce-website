@@ -34,7 +34,7 @@ const ShoppingCart = ({ cart, showCart, setShowCart }) => {
             className="fixed top-0 bottom-0 left-0 right-0 w-full bg-[#00000055] "
           ></div>
 
-          <div className="p-4 fixed max-w-[327px] bg-white md:max-w-sm md:fixed md:right-16 lg:right-40 z-[1000]">
+          <div className="p-4 fixed rounded-lg max-w-[327px] bg-white md:max-w-sm md:fixed md:right-16 lg:right-40 z-[1000]">
             {cart.length === 0 && (
               <div>
                 <p>
