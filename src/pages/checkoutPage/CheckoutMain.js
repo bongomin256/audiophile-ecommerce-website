@@ -16,16 +16,17 @@ const CheckoutMain = () => {
         <button className="py-5 " onClick={() => navigate(-1)}>
           <h3 className="capitalize ">go back</h3>
         </button>
-
-        <div>
-          <h3>checkout</h3>
-          <BillingDetails />
-          <PaymentDetails />
-          <ShippingInfo />
-        </div>
-        <div>
-          <Summary />
-        </div>
+        <form action="">
+          <div>
+            <h3>checkout</h3>
+            <BillingDetails />
+            <PaymentDetails />
+            <ShippingInfo />
+          </div>
+          <div>
+            <Summary />
+          </div>
+        </form>
       </section>
     </MainLayout>
   );
