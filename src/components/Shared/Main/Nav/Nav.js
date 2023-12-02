@@ -150,7 +150,7 @@ function Nav({ cartSize }) {
             ></div>
             <ul
               // onClick={() => setIsMobileNavOpen(false)}
-              className="sticky  w-full mt-6  overflow-y-auto transition-transform duration-500 ease-in-out transform translate-y-0 bg-white z-[1999]"
+              className="sticky rounded-b-lg  w-full mt-6  overflow-y-auto transition-transform duration-500 ease-in-out transform translate-y-0 bg-white z-[1999]"
             >
               <div className="py-10 overflow-y-scroll md:py-14">
                 <CategoryNavLink isMobileNavOpen={isMobileNavOpen} />

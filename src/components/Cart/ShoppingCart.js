@@ -25,7 +25,7 @@ const ShoppingCart = ({ cart, showCart, setShowCart }) => {
   //   console.log(total);
 
   return (
-    <section className="mx-6 mt-6">
+    <section className="mx-6 ">
       {/* bg-[#00000055] fixed h-screen w-screen z-[1000] */}
       {showCart && (
         <>
@@ -54,11 +54,12 @@ const ShoppingCart = ({ cart, showCart, setShowCart }) => {
                 {cart.map((product) => (
                   <div key={product.id} className="grid grid-cols-3 gap-3 mb-5">
                     {/* grid grid-cols-3 gap-3 flex items-center */}
-                    <div className="">
+                    <div>
                       {/* <img src={product.image.mobile} alt="" /> */}
                       <img
                         src={`./assets/cart/image-${product.slug}.jpg`}
                         alt=""
+                        className="rounded-lg"
                       />
                     </div>
                     <div>
