@@ -1,4 +1,7 @@
-import React from "react";
+// importing useform from react-hook-form
+import { useForm } from "react-hook-form";
+import { DevTool } from "@hookform/devtools";
+
 import BillingDetails from "./BillingDetail";
 import PaymentDetails from "./PaymentDetails";
 import ShippingInfo from "./ShippingInfo";
@@ -8,25 +11,40 @@ import { useNavigate } from "react-router-dom";
 
 const CheckoutMain = () => {
   const navigate = useNavigate();
+  const form = useForm();
+  const { register, control, handleSubmit, formState } = form;
+  const { errors } = formState;
+
+  const handleFormSubmit = (data) => {
+    console.log(data);
+  };
   return (
     <MainLayout>
       {/* <div className="fixed top-0 bottom-0 left-0 right-0 w-full bg-[#00000055] "></div> */}
       {/* className="bg-[#00000055] h-screen w-screen z-[1000] px-5" */}
-      <section className="px-8 md:px-16 lg:px-40 top-50 mb-[10rem]">
+      <section className="px-8 md:px-16 lg:px-40 top-50 mb-[10rem] bg-[#F1F1F1]">
         <button className="py-5 " onClick={() => navigate(-1)}>
           <h3 className="capitalize ">go back</h3>
         </button>
-        <form action="">
+
+        <form
+          onSubmit={handleSubmit(handleFormSubmit)}
+          className="p-6 bg-white"
+          action=""
+          noValidate
+        >
           <div>
-            <h3>checkout</h3>
-            <BillingDetails />
-            <PaymentDetails />
-            <ShippingInfo />
+            <h3 className="mb-8 text-2xl font-bold uppercase">checkout</h3>
+            <BillingDetails register={register} errors={errors} />
+            <ShippingInfo register={register} errors={errors} />
+            <PaymentDetails register={register} errors={errors} />
           </div>
           <div>
             <Summary />
           </div>
+          <button type="submit">submit</button>
         </form>
+        <DevTool control={control} />
       </section>
     </MainLayout>
   );

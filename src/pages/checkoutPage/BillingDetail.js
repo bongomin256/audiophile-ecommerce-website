@@ -1,34 +1,72 @@
 // importing useform from react-hook-form
-import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
+// import { useForm } from "react-hook-form";
+// import { DevTool } from "@hookform/devtools";
 
-const BillingDetail = () => {
+const BillingDetail = ({ register, errors }) => {
   // invoking useform function
-  const form = useForm();
+  //   const form = useForm();
 
   //   Destructuring the register method from useForm.
-  const { register, control } = form; //use for tracking the form state
+  //   const { register, control } = form; //use for tracking the form state
 
   // const { name, ref, onChange, onBlur } = register("username");
 
   return (
     <section>
-      <h4>billing details</h4>
+      <h4 className="mb-4 text-sm font-bold text-orange-300 uppercase font-manrope">
+        billing details
+      </h4>
       <div>
-        <div>
-          <label htmlFor="username">name</label>
-          <input type="text" {...register("username")} />
+        <div className="flex flex-col gap-2 mb-4">
+          <label htmlFor="username" className="text-sm font-bold capitalize">
+            name
+          </label>
+          <input
+            className="border-[1px] border-solid border-[#CFCFCF] rounded-lg py-3 pl-6 focus:border-orange-100 focus:outline-none hover:border-orange-100"
+            type="text"
+            placeholder="Alexei Ward"
+            {...register("username", {
+              required: {
+                value: true,
+                message: "Username is required",
+              },
+            })}
+          />
+          <p className="text-[#CD2C2C]">{errors.username?.message}</p>
         </div>
-        <div>
-          <label htmlFor="email">email</label>
-          <input type="email" {...register("email")} />
+        <div className="flex flex-col gap-2 mb-4">
+          <label htmlFor="email" className="text-sm font-bold capitalize">
+            email address
+          </label>
+          <input
+            className="border-[1px] border-solid border-[#CFCFCF] rounded-lg py-3 pl-6 focus:border-orange-100 focus:outline-none hover:border-orange-100"
+            type="email"
+            placeholder="alexei@mail.com"
+            {...register("email", {
+              pattern: {
+                value:
+                  /^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[A-Z0-9.-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                message: "Invalid email format",
+              },
+              required: true,
+            })}
+          />
+          <p className="text-[#CD2C2C]">{errors.email?.message}</p>
         </div>
-        <div>
-          <label htmlFor="phone">phone number</label>
-          <input type="tel" {...register("phone")} />
+        <div className="flex flex-col gap-2 mb-4">
+          <label htmlFor="phone" className="text-sm font-bold capitalize">
+            phone number
+          </label>
+          <input
+            className="border-[1px] border-solid border-[#CFCFCF] rounded-lg py-3 pl-6 focus:border-orange-100 focus:outline-none hover:border-orange-100"
+            type="tel"
+            placeholder="+1 202-555-0136"
+            {...register("phone")}
+          />
+          <p className="text-[#CD2C2C]">{errors.phone?.message}</p>
         </div>
       </div>
-      <DevTool control={control} />
+      {/* <DevTool control={control} /> */}
     </section>
   );
 };
