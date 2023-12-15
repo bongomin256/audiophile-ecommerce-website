@@ -1,4 +1,5 @@
 import { ActionButtonOuline } from "../../Shared/ActionButtons";
+import { Link } from "react-router-dom";
 
 function Zx7Speaker() {
   return (
@@ -8,7 +9,9 @@ function Zx7Speaker() {
           <h2 className="mb-10 text-4xl font-[500] text-black uppercase">
             Zx7 Speaker
           </h2>
-          <ActionButtonOuline>see product</ActionButtonOuline>
+          <Link to="/zx7-speaker">
+            <ActionButtonOuline>see product</ActionButtonOuline>
+          </Link>
         </div>
       </article>
     </section>

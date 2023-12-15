@@ -2,6 +2,7 @@ import zx9Mobile from "../../../assets/home/mobile/image-speaker-zx9.png";
 import zx9Tablet from "../../../assets/home/tablet/image-speaker-zx9.png";
 import zx9Desktop from "../../../assets/home/desktop/image-speaker-zx9.png";
 import { ActionButtonSolid } from "../../Shared/ActionButtons";
+import { Link } from "react-router-dom";
 
 const Zx9Speaker = () => {
   return (
@@ -31,7 +32,9 @@ const Zx9Speaker = () => {
             </p>
           </div>
           <div className="text-center lg:text-left">
-            <ActionButtonSolid>see product</ActionButtonSolid>
+            <Link to="/zx9-speaker">
+              <ActionButtonSolid>see product</ActionButtonSolid>
+            </Link>
           </div>
         </div>
       </div>

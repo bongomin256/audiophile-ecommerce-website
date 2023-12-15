@@ -2,7 +2,7 @@ import yx1Mobile from "../../../assets/home/mobile/image-earphones-yx1.jpg";
 import yx1Tablet from "../../../assets/home/tablet/image-earphones-yx1.jpg";
 import yx1Desktop from "../../../assets/home/desktop/image-earphones-yx1.jpg";
 import { ActionButtonOuline } from "../../Shared/ActionButtons";
-
+import { Link } from "react-router-dom";
 const Yx1Earphones = () => {
   return (
     <section className="px-8 mt-8 md:px-16 lg:px-40">
@@ -21,7 +21,9 @@ const Yx1Earphones = () => {
             <h2 className="text-4xl text-black uppercase font-[500] mb-6 md:mb-8 md:text-3xl">
               yx1 earphones
             </h2>
-            <ActionButtonOuline>see product</ActionButtonOuline>
+            <Link to="/yx1-earphones">
+              <ActionButtonOuline>see product</ActionButtonOuline>
+            </Link>
           </div>
         </section>
         <img src="" alt="" />
