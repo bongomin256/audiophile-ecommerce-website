@@ -8,8 +8,10 @@ import { CartContext } from "../../context/CartContext";
 const AllCategoriesProductDetailPages = ({ productId, cart, setCart }) => {
   const navigate = useNavigate();
 
+  // Getting the Product detail to display by their id
   const productDetail = data.find(({ id }) => id === productId);
 
+  // setting the qty
   const [quantityCount, setQuantityCount] = useState(1);
   const [alertMessage, setAlertMessage] = useState(false);
 

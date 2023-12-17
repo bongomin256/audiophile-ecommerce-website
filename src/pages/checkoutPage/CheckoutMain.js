@@ -9,7 +9,7 @@ import Summary from "./Summary";
 import MainLayout from "../../components/Shared/Main/Main";
 import { useNavigate } from "react-router-dom";
 
-const CheckoutMain = () => {
+const CheckoutMain = ({ cart }) => {
   const navigate = useNavigate();
   const form = useForm();
   const { register, control, handleSubmit, formState } = form;
@@ -17,6 +17,16 @@ const CheckoutMain = () => {
 
   const handleFormSubmit = (data) => {
     console.log(data);
+  };
+
+  //   total price of the cart
+  const totalPrice = (cart) => {
+    let overallPrice = 0;
+    cart.forEach((product) => {
+      overallPrice += product.price * product.quantityCount;
+      console.log(overallPrice);
+    });
+    return overallPrice;
   };
   return (
     <MainLayout>
@@ -40,9 +50,9 @@ const CheckoutMain = () => {
             <PaymentDetails register={register} errors={errors} />
           </div>
           <div>
-            <Summary />
+            <Summary cart={cart} totalPrice={totalPrice} />
           </div>
-          <button type="submit">submit</button>
+          {/* <button type="submit">submit</button> */}
         </form>
         <DevTool control={control} />
       </section>

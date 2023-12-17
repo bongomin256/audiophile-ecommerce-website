@@ -52,7 +52,7 @@ function App() {
         {categoriesRoutes}
         {productDetailsRoutes}
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
-        <Route path="/checkout" element={<CheckoutMain />} />
+        <Route path="/checkout" element={<CheckoutMain cart={cart} />} />
         {/* <Route path="/headphones/:id" element={<XX99MarkTwoDetail />} /> */}
         {/* <Route path="/speakers" element={<Speakers />} /> */}
         {/* <Route path="/earphones" element={<Earphones />} /> */}
