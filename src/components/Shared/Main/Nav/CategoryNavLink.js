@@ -6,7 +6,7 @@ import headphone from "../../../../assets/shared/desktop/image-category-thumbnai
 import earphone from "../../../../assets/shared/desktop/image-category-thumbnail-earphones.png";
 import speaker from "../../../../assets/shared/desktop/image-category-thumbnail-speakers.png";
 
-const CategoryNavLink = () => {
+const CategoryNavLink = ({ isMobileNavOpen, setIsMobileNavOpen }) => {
   return (
     <section className={`px-8 mt-[2.2rem] md:px-16 lg:px-40 `}>
       <div className="grid items-center gap-20 md:grid-cols-3 md:gap-5 lg:gap-8 ">
@@ -23,6 +23,7 @@ const CategoryNavLink = () => {
                 headphones
               </h3>
               <Link
+                onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
                 to="/headphones"
                 className="flex items-center justify-center gap-2 text-sm uppercase"
               >
@@ -45,6 +46,7 @@ const CategoryNavLink = () => {
                 speakers
               </h3>
               <Link
+                onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
                 to="/speakers"
                 className="flex items-center justify-center gap-2 text-sm uppercase"
               >
@@ -67,6 +69,7 @@ const CategoryNavLink = () => {
                 earphones
               </h3>
               <Link
+                onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
                 to="/earphones"
                 className="flex items-center justify-center gap-2 text-sm font-semibold uppercase font text-grayHover"
               >

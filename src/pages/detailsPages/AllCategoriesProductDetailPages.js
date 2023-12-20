@@ -52,7 +52,7 @@ const AllCategoriesProductDetailPages = ({ productId, cart, setCart }) => {
     console.log(cart.length);
     // console.log(productDetail);
   };
-
+  // localStorage.setItem("cartArrays", JSON.stringify(cart));
   return (
     <CategoryLayout cart={cart}>
       <section className="px-8 md:px-16 lg:px-40 top-50 mb-[10rem]">

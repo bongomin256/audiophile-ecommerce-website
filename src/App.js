@@ -17,6 +17,9 @@ import AllCategoriesProductDetailPages from "./pages/detailsPages/AllCategoriesP
 import { CartContextProvider } from "./context/CartContext";
 import CheckoutMain from "./pages/checkoutPage/CheckoutMain";
 function App() {
+  // const [cart, setCart] = useState(
+  //   JSON.parse(localStorage.getItem("cartArrays"))
+  // );
   const [cart, setCart] = useState([]);
 
   // All categories Pages routes (Headphones, speakers, and earphones)

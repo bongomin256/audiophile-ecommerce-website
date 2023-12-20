@@ -5,12 +5,11 @@ const Summary = ({ cart, totalPrice }) => {
   //   console.log("Cart Summary:", summary);
   return (
     <section>
-      <h4 className="mb-4 text-base font-bold uppercase font-manrope">
-        Summary
-      </h4>
-
       {cart.length > 0 && (
         <div>
+          <h4 className="mb-4 text-base font-bold uppercase font-manrope">
+            Summary
+          </h4>
           {cart.map((product) => (
             <div className="flex justify-between">
               <div className="flex gap-4">

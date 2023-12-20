@@ -32,14 +32,14 @@ const CheckoutMain = ({ cart }) => {
     <MainLayout>
       {/* <div className="fixed top-0 bottom-0 left-0 right-0 w-full bg-[#00000055] "></div> */}
       {/* className="bg-[#00000055] h-screen w-screen z-[1000] px-5" */}
-      <section className="px-8 md:px-16 lg:px-40 top-50 mb-[10rem] bg-[#F1F1F1]">
+      <section className="px-8 pb-8 md:px-16 lg:px-40 top-50 mb-[10rem] bg-[#F1F1F1] ">
         <button className="py-5 " onClick={() => navigate(-1)}>
           <h3 className="capitalize ">go back</h3>
         </button>
 
         <form
           onSubmit={handleSubmit(handleFormSubmit)}
-          className="p-6 bg-white"
+          className="p-6 bg-white rounded-lg"
           action=""
           noValidate
         >
@@ -49,11 +49,11 @@ const CheckoutMain = ({ cart }) => {
             <ShippingInfo register={register} errors={errors} />
             <PaymentDetails register={register} errors={errors} />
           </div>
-          <div>
-            <Summary cart={cart} totalPrice={totalPrice} />
-          </div>
           {/* <button type="submit">submit</button> */}
         </form>
+        <div className="p-6 mt-8 bg-white rounded-lg">
+          <Summary cart={cart} totalPrice={totalPrice} />
+        </div>
         <DevTool control={control} />
       </section>
     </MainLayout>

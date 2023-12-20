@@ -17,6 +17,7 @@ const BillingDetail = ({ register, errors }) => {
         billing details
       </h4>
       <div>
+        {/* className="md:flex-col md:flex-wrap md:justify-between md:flex" */}
         <div className="flex flex-col gap-2 mb-4">
           <label htmlFor="username" className="text-sm font-bold capitalize">
             name

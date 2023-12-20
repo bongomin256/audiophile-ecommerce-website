@@ -16,3 +16,11 @@ body,
 .product__listing .product__name:nth-last-child(even) .product__img {
   order: 2;
 }
+
+body.active__modal {
+  overflow-y: hidden;
+}
+
+.hidden {
+  overflow-y: hidden;
+}

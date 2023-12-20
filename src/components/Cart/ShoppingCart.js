@@ -21,9 +21,6 @@ const ShoppingCart = ({ cart, showCart, setShowCart }) => {
     return overallPrice;
   };
 
-  //   const total = totalPrice(cart);
-  //   console.log(total);
-
   return (
     <section className="mx-6 ">
       {/* bg-[#00000055] fixed h-screen w-screen z-[1000] */}
