@@ -39,23 +39,25 @@ const CheckoutMain = ({ cart }) => {
 
         <form
           onSubmit={handleSubmit(handleFormSubmit)}
-          className="p-6 bg-white rounded-lg"
+          //   className="p-6 bg-white rounded-lg lg:max-w-screen-md lg:w-full"
+          className="items-start lg:flex lg:justify-between"
           action=""
           noValidate
         >
-          <div>
+          <div className="p-6 bg-white rounded-lg lg:max-w-screen-md lg:w-full">
             <h3 className="mb-8 text-2xl font-bold uppercase">checkout</h3>
             <BillingDetails register={register} errors={errors} />
             <ShippingInfo register={register} errors={errors} />
             <PaymentDetails register={register} errors={errors} />
           </div>
+          <div className="p-6 mt-8 bg-white rounded-lg lg:max-w-[350px] lg:mt-0 lg:w-full lg:min-h-min  ">
+            <Summary cart={cart} totalPrice={totalPrice} />
+          </div>
           {/* <button type="submit">submit</button> */}
         </form>
-        <div className="p-6 mt-8 bg-white rounded-lg">
-          <Summary cart={cart} totalPrice={totalPrice} />
-        </div>
-        <DevTool control={control} />
       </section>
+
+      <DevTool control={control} />
     </MainLayout>
   );
 };

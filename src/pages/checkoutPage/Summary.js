@@ -11,7 +11,7 @@ const Summary = ({ cart, totalPrice }) => {
             Summary
           </h4>
           {cart.map((product) => (
-            <div className="flex justify-between">
+            <div className="flex justify-between lg:mb-6">
               <div className="flex gap-4">
                 <div>
                   <img

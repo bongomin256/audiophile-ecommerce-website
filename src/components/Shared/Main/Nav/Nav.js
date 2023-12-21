@@ -122,11 +122,17 @@ function Nav({ cartSize }) {
       </header>
 
       {showCart && (
-        <ShoppingCart
-          showCart={showCart}
-          setShowCart={setShowCart}
-          cart={cartSize}
-        />
+        <>
+          {/* <div
+            onClick={() => setShowCart(!showCart)}
+            className="fixed top-0 bottom-0 left-0 right-0 w-full bg-[#00000055] "
+          ></div> */}
+          <ShoppingCart
+            showCart={showCart}
+            setShowCart={setShowCart}
+            cart={cartSize}
+          />
+        </>
       )}
     </>
   );

@@ -20,7 +20,3 @@ body,
 body.active__modal {
   overflow-y: hidden;
 }
-
-.hidden {
-  overflow-y: hidden;
-}
