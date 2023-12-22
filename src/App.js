@@ -16,11 +16,14 @@ import CategoriesPages from "./pages/allCategoriesPages/AllCategories";
 import AllCategoriesProductDetailPages from "./pages/detailsPages/AllCategoriesProductDetailPages";
 import { CartContextProvider } from "./context/CartContext";
 import CheckoutMain from "./pages/checkoutPage/CheckoutMain";
+import Confirmation from "./pages/checkoutPage/Confirmation";
 function App() {
   // const [cart, setCart] = useState(
   //   JSON.parse(localStorage.getItem("cartArrays"))
   // );
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem("cartArrays")) || []
+  );
 
   // All categories Pages routes (Headphones, speakers, and earphones)
   const categoriesRoutes = newCategoriesName.map((category) => (
@@ -56,7 +59,10 @@ function App() {
         {productDetailsRoutes}
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
         <Route path="/checkout" element={<CheckoutMain cart={cart} />} />
-        {/* <Route path="/headphones/:id" element={<XX99MarkTwoDetail />} /> */}
+        {/* <Route
+          path="/confirmation"
+          element={<Confirmation cart={cart} setCart={setCart} />}
+        /> */}
         {/* <Route path="/speakers" element={<Speakers />} /> */}
         {/* <Route path="/earphones" element={<Earphones />} /> */}
       </Routes>

@@ -1,8 +1,14 @@
-import React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import Confirmation from "./Confirmation";
 
-const Summary = ({ cart, totalPrice }) => {
+const Summary = ({ cart, totalPrice, toggleSuccessModal }) => {
   //   const summary = cart;
   //   console.log("Cart Summary:", summary);
+
+  if (!cart) {
+    return <p>Loading...</p>; // You can display a loading message or handle this case accordingly
+  }
   return (
     <section>
       {cart.length > 0 && (
@@ -11,7 +17,7 @@ const Summary = ({ cart, totalPrice }) => {
             Summary
           </h4>
           {cart.map((product) => (
-            <div className="flex justify-between lg:mb-6">
+            <div key={product.name} className="flex justify-between lg:mb-6">
               <div className="flex gap-4">
                 <div>
                   <img
@@ -70,12 +76,15 @@ const Summary = ({ cart, totalPrice }) => {
               $ {(totalPrice(cart) + 50).toLocaleString()}
             </p>
           </div>
+          {/* <Link to="/confirmation"> */}
           <button
             type="submit"
+            onClick={toggleSuccessModal}
             className="w-full px-6 py-4 tracking-widest text-white uppercase transition-all duration-300 ease-in-out bg-orange-300 hover:bg-orange-100"
           >
             continue & pay
           </button>
+          {/* </Link> */}
         </div>
       )}
     </section>

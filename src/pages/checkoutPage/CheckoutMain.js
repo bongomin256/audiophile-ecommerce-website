@@ -1,4 +1,5 @@
 // importing useform from react-hook-form
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 
@@ -8,6 +9,7 @@ import ShippingInfo from "./ShippingInfo";
 import Summary from "./Summary";
 import MainLayout from "../../components/Shared/Main/Main";
 import { useNavigate } from "react-router-dom";
+import Confirmation from "./Confirmation";
 
 const CheckoutMain = ({ cart }) => {
   const navigate = useNavigate();
@@ -17,6 +19,21 @@ const CheckoutMain = ({ cart }) => {
 
   const handleFormSubmit = (data) => {
     console.log(data);
+  };
+  //succes Modal
+  const [successModal, setSuccessModal] = useState(false);
+  const toggleSuccessModal = (successModal) => {
+    setSuccessModal(successModal);
+  };
+
+  if (successModal) {
+    document.body.classList.add("active__modal");
+  } else {
+    document.body.classList.remove("active__modal");
+  }
+
+  const closeSuccessModal = () => {
+    setSuccessModal(!successModal);
   };
 
   //   total price of the cart
@@ -29,7 +46,7 @@ const CheckoutMain = ({ cart }) => {
     return overallPrice;
   };
   return (
-    <MainLayout>
+    <MainLayout cart={cart}>
       {/* <div className="fixed top-0 bottom-0 left-0 right-0 w-full bg-[#00000055] "></div> */}
       {/* className="bg-[#00000055] h-screen w-screen z-[1000] px-5" */}
       <section className="px-8 pb-8 md:px-16 lg:px-40 top-50 mb-[10rem] bg-[#F1F1F1] ">
@@ -51,11 +68,22 @@ const CheckoutMain = ({ cart }) => {
             <PaymentDetails register={register} errors={errors} />
           </div>
           <div className="p-6 mt-8 bg-white rounded-lg lg:max-w-[350px] lg:mt-0 lg:w-full lg:min-h-min  ">
-            <Summary cart={cart} totalPrice={totalPrice} />
+            <Summary
+              cart={cart}
+              totalPrice={totalPrice}
+              toggleSuccessModal={toggleSuccessModal}
+            />
           </div>
           {/* <button type="submit">submit</button> */}
         </form>
       </section>
+      {successModal && (
+        <Confirmation
+          cart={cart}
+          totalPrice={totalPrice}
+          closeSuccessModal={closeSuccessModal}
+        />
+      )}
 
       <DevTool control={control} />
     </MainLayout>

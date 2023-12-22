@@ -51,7 +51,7 @@ const AllCategoriesProductDetailPages = ({ productId, cart, setCart }) => {
 
     // console.log(productDetail);
   };
-  // localStorage.setItem("cartArrays", JSON.stringify(cart));
+  localStorage.setItem("cartArrays", JSON.stringify(cart));
 
   // useEffect(() => {
   //   // Load cart from local storage on page load

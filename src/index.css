@@ -19,4 +19,5 @@ body,
 
 body.active__modal {
   overflow-y: hidden;
+  position: fixed !important;
 }

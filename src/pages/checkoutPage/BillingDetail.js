@@ -44,12 +44,12 @@ const BillingDetail = ({ register, errors }) => {
             type="email"
             placeholder="alexei@mail.com"
             {...register("email", {
-              pattern: {
-                value:
-                  /^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[A-Z0-9.-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                message: "Invalid email format",
-              },
-              required: true,
+              //   pattern: {
+              //     value:
+              //       /^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[A-Z0-9.-]+(?:\.[a-zA-Z0-9-]+)*$/,
+              //     message: "Invalid email format",
+              //   },
+              //   required: true,
             })}
           />
           <p className="text-[#CD2C2C]">{errors.email?.message}</p>
