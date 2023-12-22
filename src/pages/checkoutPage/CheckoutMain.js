@@ -11,7 +11,7 @@ import MainLayout from "../../components/Shared/Main/Main";
 import { useNavigate } from "react-router-dom";
 import Confirmation from "./Confirmation";
 
-const CheckoutMain = ({ cart }) => {
+const CheckoutMain = ({ cart, setCart }) => {
   const navigate = useNavigate();
   const form = useForm();
   const { register, control, handleSubmit, formState } = form;
@@ -25,12 +25,6 @@ const CheckoutMain = ({ cart }) => {
   const toggleSuccessModal = (successModal) => {
     setSuccessModal(successModal);
   };
-
-  if (successModal) {
-    document.body.classList.add("active__modal");
-  } else {
-    document.body.classList.remove("active__modal");
-  }
 
   const closeSuccessModal = () => {
     setSuccessModal(!successModal);
@@ -82,6 +76,8 @@ const CheckoutMain = ({ cart }) => {
           cart={cart}
           totalPrice={totalPrice}
           closeSuccessModal={closeSuccessModal}
+          setCart={setCart}
+          successModal={successModal}
         />
       )}
 

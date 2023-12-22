@@ -25,6 +25,8 @@ function App() {
     JSON.parse(localStorage.getItem("cartArrays")) || []
   );
 
+  // const emptyCart = setCart([]);
+
   // All categories Pages routes (Headphones, speakers, and earphones)
   const categoriesRoutes = newCategoriesName.map((category) => (
     <Route
@@ -58,7 +60,10 @@ function App() {
         {categoriesRoutes}
         {productDetailsRoutes}
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
-        <Route path="/checkout" element={<CheckoutMain cart={cart} />} />
+        <Route
+          path="/checkout"
+          element={<CheckoutMain cart={cart} setCart={setCart} />}
+        />
         {/* <Route
           path="/confirmation"
           element={<Confirmation cart={cart} setCart={setCart} />}

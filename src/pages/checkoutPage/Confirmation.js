@@ -3,9 +3,23 @@ import orderConfirmationIcon from "../../assets/checkout/icon-order-confirmation
 
 import { Link } from "react-router-dom";
 
-const Confirmation = ({ cart, totalPrice, closeSuccessModal }) => {
+const Confirmation = ({
+  cart,
+  setCart,
+  totalPrice,
+  successModal,
+  closeSuccessModal,
+}) => {
   const firstItemInCart = cart[0];
   console.log("First Item:", firstItemInCart);
+
+  // REMOVING SCROLLING
+  if (successModal) {
+    document.body.classList.add("active__modal");
+  } else {
+    document.body.classList.remove("active__modal");
+  }
+  // const emptyCart = setCart([]);
   return (
     <>
       <section>
@@ -79,7 +93,10 @@ const Confirmation = ({ cart, totalPrice, closeSuccessModal }) => {
               </div>
             </div>
             <Link to="/">
-              <button className="w-full px-6 py-4 tracking-widest text-white uppercase transition-all duration-300 ease-in-out bg-orange-300 hover:bg-orange-100">
+              <button
+                onClick={() => setCart([])}
+                className="w-full px-6 py-4 tracking-widest text-white uppercase transition-all duration-300 ease-in-out bg-orange-300 hover:bg-orange-100"
+              >
                 back to home
               </button>
             </Link>

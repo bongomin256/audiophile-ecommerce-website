@@ -6,7 +6,7 @@ import {
   ActionButtonSolid,
 } from "../Shared/ActionButtons";
 
-const ShoppingCart = ({ cart, showCart, setShowCart }) => {
+const ShoppingCart = ({ cart, showCart, setShowCart, emptyCart }) => {
   const closeCart = () => {
     setShowCart(false);
   };
