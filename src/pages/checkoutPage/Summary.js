@@ -17,7 +17,7 @@ const Summary = ({ cart, totalPrice, toggleSuccessModal }) => {
             Summary
           </h4>
           {cart.map((product) => (
-            <div key={product.name} className="flex justify-between lg:mb-6">
+            <div key={product.name} className="flex justify-between mb-6">
               <div className="flex gap-4">
                 <div>
                   <img
