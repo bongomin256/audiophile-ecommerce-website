@@ -44,7 +44,7 @@ const CheckoutMain = ({ cart, setCart }) => {
       {/* <div className="fixed top-0 bottom-0 left-0 right-0 w-full bg-[#00000055] "></div> */}
       {/* className="bg-[#00000055] h-screen w-screen z-[1000] px-5" */}
       <section className="px-8 pb-8 md:px-16 lg:px-40 top-50 mb-[10rem] bg-[#F1F1F1] ">
-        <button className="py-5 " onClick={() => navigate(-1)}>
+        <button className="mt-12 mb-6 " onClick={() => navigate(-1)}>
           <h3 className="capitalize ">go back</h3>
         </button>
 
