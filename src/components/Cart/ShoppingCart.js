@@ -6,20 +6,38 @@ import {
   ActionButtonSolid,
 } from "../Shared/ActionButtons";
 
-const ShoppingCart = ({ cart, showCart, setShowCart, emptyCart }) => {
+const ShoppingCart = ({
+  cart,
+  showCart,
+  setShowCart,
+  // quantityCount,
+  // setQuantityCount,
+  // emptyCart,
+}) => {
+  // const [quantityCount, setQuantityCount] = useState(1);
   const closeCart = () => {
     setShowCart(false);
   };
-  console.log(cart);
+  // console.log(cart);
 
   const totalPrice = (cart) => {
     let overallPrice = 0;
     cart.forEach((product) => {
       overallPrice += product.price * product.quantityCount;
-      console.log(overallPrice);
+      // console.log(overallPrice);
     });
     return overallPrice;
   };
+
+  // const incrementQty = () => {
+  //   setQuantityCount((quantityCount) => quantityCount + 1);
+  // };
+
+  // const decrementQty = () => {
+  //   setQuantityCount((quantityCount) =>
+  //     quantityCount > 1 ? quantityCount - 1 : 1
+  //   );
+  // };
 
   return (
     <section className="mx-6 ">
@@ -31,7 +49,7 @@ const ShoppingCart = ({ cart, showCart, setShowCart, emptyCart }) => {
             className="fixed top-0 bottom-0 left-0 right-0 w-full bg-[#00000055] "
           ></div>
 
-          <div className="p-4 fixed rounded-lg max-w-[327px] overflow-auto max-h-[488px] bg-white md:max-w-sm md:fixed md:right-16 md:mt-6 lg:right-40 z-[1000]">
+          <div className="p-4 fixed rounded-lg w-full max-w-[327px] overflow-auto  max-h-[488px] bg-white md:max-w-sm md:fixed md:right-16 md:mt-6 lg:right-40 z-[1000]">
             {cart.length === 0 && (
               <div>
                 <p>
@@ -70,16 +88,6 @@ const ShoppingCart = ({ cart, showCart, setShowCart, emptyCart }) => {
                         <span>+</span>
                       </button>
                     </div>
-
-                    {/* <div>
-                  <div>
-                    <span>-</span>
-                  </div>
-                  <div>{product.quantityCount}</div>
-                  <div>
-                    <span>+</span>
-                  </div>
-                </div> */}
                   </div>
                 ))}
                 <div className="mt-8">

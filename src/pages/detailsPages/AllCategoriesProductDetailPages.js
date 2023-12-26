@@ -5,14 +5,20 @@ import data from "../../data.json";
 import ProductCategoryPreview from "./ProductCategoryPreview";
 import { CartContext } from "../../context/CartContext";
 
-const AllCategoriesProductDetailPages = ({ productId, cart, setCart }) => {
+const AllCategoriesProductDetailPages = ({
+  productId,
+  cart,
+  setCart,
+  quantityCount,
+  setQuantityCount,
+}) => {
   const navigate = useNavigate();
 
   // Getting the Product detail to display by their id
   const productDetail = data.find(({ id }) => id === productId);
 
   // setting the qty
-  const [quantityCount, setQuantityCount] = useState(1);
+  // const [quantityCount, setQuantityCount] = useState(1);
   const [alertMessage, setAlertMessage] = useState(false);
 
   // useEffect(() => {
@@ -30,6 +36,7 @@ const AllCategoriesProductDetailPages = ({ productId, cart, setCart }) => {
         return {
           ...product,
           quantityCount: product.quantityCount + quantityCount,
+          // quantityCount: product.quantityCount + quantityCount,
         };
       }
     });
@@ -40,7 +47,7 @@ const AllCategoriesProductDetailPages = ({ productId, cart, setCart }) => {
       }, 2000);
     }
 
-    // if present is true add new product in cart
+    // if !present is true add new product in cart
     if (!PresentInCart) {
       const newProduct = { ...productDetail, quantityCount };
       console.log(quantityCount);

@@ -25,6 +25,7 @@ function App() {
     JSON.parse(localStorage.getItem("cartArrays")) || []
   );
 
+  const [quantityCount, setQuantityCount] = useState(1);
   // const emptyCart = setCart([]);
 
   // All categories Pages routes (Headphones, speakers, and earphones)
@@ -47,6 +48,8 @@ function App() {
           cart={cart}
           setCart={setCart}
           productId={id}
+          quantityCount={quantityCount}
+          setQuantityCount={setQuantityCount}
         />
       }
     />
@@ -59,7 +62,17 @@ function App() {
         <Route path="/" element={<Home cart={cart} />} />
         {categoriesRoutes}
         {productDetailsRoutes}
-        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
+        <Route
+          path="/cart"
+          element={
+            <Cart
+              cart={cart}
+              setCart={setCart}
+              // quantityCount={quantityCount}
+              // setQuantityCount={setQuantityCount}
+            />
+          }
+        />
         <Route
           path="/checkout"
           element={<CheckoutMain cart={cart} setCart={setCart} />}
