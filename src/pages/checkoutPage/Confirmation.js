@@ -27,7 +27,7 @@ const Confirmation = ({
           onClick={closeSuccessModal}
           className="fixed top-0 bottom-0 left-0 right-0 w-full bg-[#00000055] "
         ></div>
-        <div className="fixed top-56 right-6 left-6 overflow-y-auto bg-white max-w-[327px] w-screen max-h-[600px]  p-8 rounded-lg">
+        <div className="fixed top-56 right-6 left-6 overflow-y-auto bg-white max-w-[327px] md:max-w-[540px] md:max-h-[581px] md:w-full md:top-[222px] md:m-auto max-h-[600px]  p-8 rounded-lg">
           {/* max-h-[600px] h-full */}
           <div className="overflow-y-scroll">
             <div>
@@ -44,7 +44,7 @@ const Confirmation = ({
             <p className="text-[15px] leading-6 mb-6 mt-4">
               You will receive an email confirmation shortly.
             </p>
-            <div className="mb-6 ">
+            <div className="mb-6 md:flex md:max-w-[444px] md:w-full">
               <div className="bg-[#F1F1F1] px-6 py-6 rounded-t-lg">
                 <div>
                   <div className="flex justify-between lg:mb-6 ">
