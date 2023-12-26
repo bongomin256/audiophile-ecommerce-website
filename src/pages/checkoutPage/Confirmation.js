@@ -27,8 +27,8 @@ const Confirmation = ({
           onClick={closeSuccessModal}
           className="fixed top-0 bottom-0 left-0 right-0 w-full bg-[#00000055] "
         ></div>
-        <div className="scroll__modal fixed  top-56 m-auto right-6 left-6 overflow-y-auto bg-white max-w-[327px] md:max-w-[540px] md:max-h-[581px] md:w-full md:top-[222px] md:m-auto max-h-[600px]  p-8 md:p-12 rounded-lg">
-          {/* max-h-[600px] h-full */}
+        <div className="scroll__modal fixed  top-[8rem] m-auto right-6 left-6 overflow-y-auto bg-white max-w-[327px] md:max-w-[540px] md:max-h-[581px] md:w-full md:top-[222px] md:m-auto max-h-[600px]  p-8 md:p-12 rounded-lg">
+          {/* max-h-[600px] h-full top-56 */}
           <div className="overflow-y-scroll">
             <div>
               <img
