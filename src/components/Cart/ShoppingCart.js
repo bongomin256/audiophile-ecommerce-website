@@ -8,6 +8,7 @@ import {
 
 const ShoppingCart = ({
   cart,
+  setCart,
   showCart,
   setShowCart,
   // quantityCount,

@@ -4,7 +4,7 @@ function Hero() {
   const flexBetween = "flex items-center justify-center ";
   return (
     <>
-      <section className="relative h-screen px-8 bg-no-repeat bg-contain bg-mobileHeade md:h-[80vh] md:px-10 md:bg-tabletHeader lg:bg-desktopHeader lg:bg-cover lg:px-40 ">
+      <section className="relative h-screen px-8 bg-no-repeat bg-contain bg-mobileHeade md:h-[80vh] md:px-10 md:bg-tabletHeader lg:bg-desktopHeader  lg:px-40 lg:h-screen ">
         <div
           className={`${flexBetween} flex-col gap-5 h-full text-center lg:w-1/3 lg:text-left lg:items-start`}
         >

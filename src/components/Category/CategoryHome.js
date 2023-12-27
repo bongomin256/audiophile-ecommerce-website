@@ -24,7 +24,7 @@ const Category = ({ isMobileNavOpen }) => {
               </h3>
               <Link
                 to="/headphones"
-                className="flex items-center justify-center gap-2 text-sm uppercase"
+                className="flex items-center justify-center gap-2 text-sm uppercase hover:text-orange-300"
               >
                 shop
                 <img src={rightArrow} alt="right arrow" />
@@ -46,7 +46,7 @@ const Category = ({ isMobileNavOpen }) => {
               </h3>
               <Link
                 to="/speakers"
-                className="flex items-center justify-center gap-2 text-sm uppercase"
+                className="flex items-center justify-center gap-2 text-sm uppercase hover:text-orange-300"
               >
                 shop
                 <img src={rightArrow} alt="right arrow" />
@@ -68,7 +68,7 @@ const Category = ({ isMobileNavOpen }) => {
               </h3>
               <Link
                 to="/earphones"
-                className="flex items-center justify-center gap-2 text-sm font-semibold uppercase font text-grayHover"
+                className="flex items-center justify-center gap-2 text-sm font-semibold uppercase font text-grayHover hover:text-orange-300"
               >
                 shop
                 <img src={rightArrow} alt="right arrow" />

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Zx9Speaker = () => {
   return (
-    <section className="px-8 mt-24 md:px-16 lg:px-40">
+    <section className="px-8 mt-24 md:px-16 lg:px-40 lg:overflow-hidden">
       <div className="flex flex-col gap-8 px-8 py-12 m-auto bg-orange-300 rounded-lg md:gap-14 lg:flex-row lg:items-center lg:justify-center lg:gap-24 lg:px-28">
         <div className="m-auto lg:m-0 ">
           <picture className="bg-circlePattern">
