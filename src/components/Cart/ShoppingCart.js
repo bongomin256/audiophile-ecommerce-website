@@ -43,6 +43,7 @@ const ShoppingCart = ({
   return (
     <section className="mx-6 ">
       {/* bg-[#00000055] fixed h-screen w-screen z-[1000] */}
+
       {showCart && (
         <>
           <div
@@ -51,6 +52,10 @@ const ShoppingCart = ({
           ></div>
 
           <div className="p-4 fixed rounded-lg w-full max-w-[327px] overflow-auto  max-h-[488px] bg-white md:max-w-sm md:fixed md:right-16 md:mt-6 lg:right-40 z-[1000]">
+            {/* <div
+              onClick={closeCart}
+              className="fixed top-0 bottom-0 left-0 right-0 w-full bg-[#00000055] "
+            ></div> */}
             {cart.length === 0 && (
               <div>
                 <p>
