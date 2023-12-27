@@ -11,7 +11,7 @@ const Yx1Earphones = () => {
           <source media="(min-width: 1024px )" srcset={yx1Desktop} />
           <source media="(min-width:768px )" srcset={yx1Tablet} />
           <img
-            className="rounded-lg h-[200px] w-100  md:m-h-[320px] md:m-w-[339px] md:h-full md:w-full lg:w-full "
+            className="rounded-lg h-[200px] w-full  md:m-h-[320px] md:m-w-[339px] md:h-full md:w-full lg:w-full "
             // w-[320px]
             src={yx1Mobile}
             alt=""
